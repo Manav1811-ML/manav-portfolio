@@ -5,54 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manav Jitubhai Luhar | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition duration-300">
+<body class="bg-gradient-to-br from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition duration-300">
   <!-- Header -->
-  <header class="text-center py-10 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-    <h1 class="text-4xl font-bold">Manav Jitubhai Luhar</h1>
-    <p class="text-lg mt-2">Computer Vision Engineer | Data Scientist and Study Abroad Consultant</p>
+  <header class="text-center py-12 bg-gradient-to-r from-blue-700 to-indigo-800 text-white shadow-lg">
+    <h1 class="text-5xl font-bold tracking-wide">Manav Jitubhai Luhar</h1>
+    <p class="text-xl mt-3">Computer Vision Engineer | Data Scientist and Study Abroad Consultant</p>
   </header>
 
   <!-- Toggle Dark Mode -->
   <div class="flex justify-end p-4">
-    <button onclick="document.body.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded">Toggle Dark Mode</button>
+    <button onclick="document.body.classList.toggle('dark')" class="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-5 py-2 rounded shadow hover:scale-105 transition">Toggle Dark Mode</button>
   </div>
 
   <!-- About Me -->
-  <section class="max-w-4xl mx-auto px-6 py-8">
-    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-    <p>I have a passion for technology and I'm driven to help others with my knowledge and skills. I'm seeking an opportunity to learn and grow in the tech industry. I'm a quick learner and eager to take on new challenges. Additionally, I have strong communication skills which make me an effective team member.</p>
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-semibold mb-6 border-b-4 border-blue-500 inline-block">About Me</h2>
+    <p class="text-lg leading-relaxed">I have a passion for technology and I'm driven to help others with my knowledge and skills. I'm seeking an opportunity to learn and grow in the tech industry. I'm a quick learner and eager to take on new challenges. Additionally, I have strong communication skills which make me an effective team member.</p>
   </section>
 
   <!-- Projects -->
-  <section class="max-w-4xl mx-auto px-6 py-8">
-    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-    <div class="space-y-6">
-      <div>
-        <h3 class="text-xl font-bold">Multiple Disease Prediction System</h3>
-        <p>Heart, Diabetes, and Parkinson’s prediction using SVM and FastAPI.</p>
-        <p class="text-sm">Tech Stack: Python, FastAPI, Machine Learning</p>
-        <a href="#" class="text-blue-500 underline">GitHub (Coming Soon)</a>
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-semibold mb-6 border-b-4 border-blue-500 inline-block">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-800 shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-2">Multiple Disease Prediction System</h3>
+        <p class="mb-2">Heart, Diabetes, and Parkinson’s prediction using SVM and FastAPI.</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Tech Stack: Python, FastAPI, Machine Learning</p>
+        <a href="#" class="text-blue-600 hover:underline">GitHub (Coming Soon)</a>
       </div>
-      <div>
-        <h3 class="text-xl font-bold">Diamond Part Recognition System</h3>
-        <p>Dataset creation, model training, and validation for diamond part recognition.</p>
-        <p class="text-sm">Tech Stack: Python, OpenCV</p>
-        <a href="#" class="text-blue-500 underline">GitHub (Coming Soon)</a>
+      <div class="bg-white dark:bg-gray-800 shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-2">Diamond Part Recognition System</h3>
+        <p class="mb-2">Dataset creation, model training, and validation for diamond part recognition.</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Tech Stack: Python, OpenCV</p>
+        <a href="#" class="text-blue-600 hover:underline">GitHub (Coming Soon)</a>
       </div>
-      <div>
-        <h3 class="text-xl font-bold">Angular/Node.js CRUD Web App</h3>
-        <p>Developed dynamic web application using Angular and Node.js.</p>
-        <p class="text-sm">Tech Stack: Angular, Node.js</p>
-        <a href="#" class="text-blue-500 underline">GitHub (Coming Soon)</a>
+      <div class="bg-white dark:bg-gray-800 shadow-lg p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-2">Angular/Node.js CRUD Web App</h3>
+        <p class="mb-2">Developed dynamic web application using Angular and Node.js.</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Tech Stack: Angular, Node.js</p>
+        <a href="#" class="text-blue-600 hover:underline">GitHub (Coming Soon)</a>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="max-w-4xl mx-auto px-6 py-8">
-    <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-    <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 list-disc list-inside">
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-semibold mb-6 border-b-4 border-blue-500 inline-block">Skills</h2>
+    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-lg list-disc list-inside">
       <li>Python</li>
       <li>Java</li>
       <li>C / C++</li>
@@ -69,22 +77,22 @@
   </section>
 
   <!-- Resume -->
-  <section class="max-w-4xl mx-auto px-6 py-8">
-    <h2 class="text-2xl font-semibold mb-4">Resume</h2>
-    <a href="#" class="text-blue-500 underline">Download Resume (PDF)</a>
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-semibold mb-6 border-b-4 border-blue-500 inline-block">Resume</h2>
+    <a href="#" class="text-blue-600 hover:underline text-lg">Download Resume (PDF)</a>
   </section>
 
   <!-- Contact -->
-  <section class="max-w-4xl mx-auto px-6 py-8">
-    <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-    <p>Email: <a href="mailto:manavluhar10@gmail.com" class="text-blue-500 underline">manavluhar10@gmail.com</a></p>
-    <p>Phone: +91 6351813020</p>
-    <p>LinkedIn: <a href="#" class="text-blue-500 underline">(Add Link)</a></p>
-    <p>GitHub: <a href="#" class="text-blue-500 underline">(Add Link)</a></p>
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h2 class="text-3xl font-semibold mb-6 border-b-4 border-blue-500 inline-block">Contact</h2>
+    <p class="mb-2">Email: <a href="mailto:manavluhar10@gmail.com" class="text-blue-600 hover:underline">manavluhar10@gmail.com</a></p>
+    <p class="mb-2">Phone: +91 6351813020</p>
+    <p class="mb-2">LinkedIn: <a href="#" class="text-blue-600 hover:underline">(Add Link)</a></p>
+    <p class="mb-2">GitHub: <a href="#" class="text-blue-600 hover:underline">(Add Link)</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+  <footer class="text-center py-8 text-sm text-gray-600 dark:text-gray-400 border-t mt-12">
     &copy; 2025 Manav Jitubhai Luhar. All rights reserved.
   </footer>
 </body>
