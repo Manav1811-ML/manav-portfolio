@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -16,10 +18,14 @@
 </head>
 <body class="bg-gradient-to-br from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition duration-300">
   <!-- Header -->
-  <header class="text-center py-12 bg-gradient-to-r from-blue-700 to-indigo-800 text-white shadow-lg">
-    <h1 class="text-5xl font-bold tracking-wide">Manav Jitubhai Luhar</h1>
-    <p class="text-xl mt-3">Computer Vision Engineer | Data Scientist and Study Abroad Consultant</p>
-  </header>
+  <section class="h-screen bg-cover bg-center flex items-center justify-center text-white" 
+  style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1470&q=80')">
+  <div class="text-center backdrop-blur-sm bg-black/40 p-10 rounded-lg">
+    <h1 class="text-5xl font-bold">Hi, I’m Manav</h1>
+    <p class="text-xl mt-4">Computer Vision Engineer | Study Abroad Consultant</p>
+  </div>
+</section>
+
 
   <!-- Toggle Dark Mode -->
   <div class="flex justify-end p-4">
@@ -35,19 +41,16 @@
   <!-- Projects -->
   <section class="max-w-5xl mx-auto px-6 py-12">
     <h2 class="text-3xl font-semibold mb-6 border-b-4 border-blue-500 inline-block">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white dark:bg-gray-800 shadow-lg p-6 rounded-xl">
-        <h3 class="text-xl font-bold mb-2">Multiple Disease Prediction System</h3>
-        <p class="mb-2">Heart, Diabetes, and Parkinson’s prediction using SVM and FastAPI.</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Tech Stack: Python, FastAPI, Machine Learning</p>
-        <a href="#" class="text-blue-600 hover:underline">GitHub (Coming Soon)</a>
-      </div>
-      <div class="bg-white dark:bg-gray-800 shadow-lg p-6 rounded-xl">
-        <h3 class="text-xl font-bold mb-2">Diamond Part Recognition System</h3>
-        <p class="mb-2">Dataset creation, model training, and validation for diamond part recognition.</p>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Tech Stack: Python, OpenCV</p>
-        <a href="#" class="text-blue-600 hover:underline">GitHub (Coming Soon)</a>
-      </div>
+    <div class="swiper w-full max-w-4xl mx-auto my-12">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide p-4 bg-white shadow rounded">
+      <img src="project1.jpg" class="rounded-lg w-full" />
+      <h3 class="text-xl mt-4 font-semibold">Disease Prediction System</h3>
+    </div>
+    <div class="swiper-slide p-4 bg-white shadow rounded">
+      <img src="project2.jpg" class="rounded-lg w-full" />
+      <h3 class="text-xl mt-4 font-semibold">Diamond Recognition</h3>
+    </div>
       <div class="bg-white dark:bg-gray-800 shadow-lg p-6 rounded-xl">
         <h3 class="text-xl font-bold mb-2">Angular/Node.js CRUD Web App</h3>
         <p class="mb-2">Developed dynamic web application using Angular and Node.js.</p>
@@ -95,5 +98,20 @@
   <footer class="text-center py-8 text-sm text-gray-600 dark:text-gray-400 border-t mt-12">
     &copy; 2025 Manav Jitubhai Luhar. All rights reserved.
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<section class="py-16" data-aos="fade-up"> ... </section>
+
 </body>
 </html>
