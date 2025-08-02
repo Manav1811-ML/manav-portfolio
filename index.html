@@ -1,120 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manav Jitubhai Luhar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        .gradient-text {
-            background: linear-gradient(45deg, #4F46E5, #06B6D4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-lg">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold gradient-text">Manav</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-indigo-600 transition">About</a>
-                    <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
-                    <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
-                    <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-                    <button onclick="document.body.classList.toggle('dark')" 
-                            class="bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-full">
-                        🌗
-                    </button>
-                </div>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="images/profile.jpg" alt="Manav" class="w-10 h-10 rounded-full">
+                <span class="text-xl font-bold text-indigo-600">Manav</span>
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#about" class="hover:text-indigo-600">About</a>
+                <a href="#projects" class="hover:text-indigo-600">Projects</a>
+                <a href="#skills" class="hover:text-indigo-600">Skills</a>
+                <a href="#contact" class="hover:text-indigo-600">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="h-screen flex items-center justify-center text-center px-6" 
-             style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80') center/cover;">
-        <div data-aos="fade-up" class="max-w-3xl">
-            <img src="profile-image.jpg" alt="Manav" 
-                 class="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-indigo-500 shadow-xl">
-            <h1 class="text-5xl font-bold text-white mb-4">Hi, I'm Manav</h1>
-            <p class="text-xl text-gray-300 mb-8">Computer Vision Engineer | Study Abroad Consultant</p>
+    <section class="min-h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
+        style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80');">
+        <div class="bg-black/60 p-10 rounded-lg max-w-3xl text-white" data-aos="fade-up">
+            <h1 class="text-5xl font-bold mb-4">Hi, I'm Manav</h1>
+            <p class="text-xl mb-6">Computer Vision Engineer | Study Abroad Consultant</p>
             <div class="flex justify-center gap-4">
-                <a href="#contact" 
-                   class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full transition">
-                    Contact Me
-                </a>
-                <a href="#projects" 
-                   class="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-full transition">
-                    View Projects
-                </a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-full">Contact Me</a>
+                <a href="#projects" class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full">View Projects</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 px-6">
-        <div class="max-w-5xl mx-auto" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-4">
-                    <p class="text-lg leading-relaxed">
-                        I have a passion for technology and I'm driven to help others with my knowledge and skills. 
-                        I'm seeking an opportunity to learn and grow in the tech industry.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        As a Computer Vision Engineer and Study Abroad Consultant, I combine technical expertise 
-                        with the ability to guide students toward their educational goals.
-                    </p>
-                </div>
-                <div class="bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg p-6 text-white">
-                    <h3 class="text-xl font-bold mb-4">Quick Facts</h3>
-                    <ul class="space-y-2">
-                        <li>🎓 Master's in Computer Vision</li>
-                        <li>💼 5+ Projects Completed</li>
-                        <li>🌍 Study Abroad Expert</li>
-                        <li>🚀 Passionate about AI & ML</li>
-                    </ul>
-                </div>
+        <div class="max-w-5xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <p class="text-lg leading-relaxed mb-4">I am a passionate technologist driven to make a difference using
+                AI, software engineering, and education consulting. I guide students abroad while building innovative
+                tech solutions.</p>
+            <div class="bg-gradient-to-r from-indigo-600 to-cyan-500 text-white rounded-lg p-6">
+                <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <li>🎓 Master's in Computer Vision</li>
+                    <li>💼 5+ Projects Completed</li>
+                    <li>🌍 Study Abroad Expert</li>
+                    <li>🚀 AI & ML Enthusiast</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 bg-gray-100 dark:bg-gray-800">
+    <section id="projects" class="py-20 px-6 bg-gray-100">
         <div class="max-w-6xl mx-auto" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden">
-                    <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Disease Prediction System</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">
-                            AI-powered system for early disease detection and prediction.
-                        </p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full text-sm">
-                                Python
-                            </span>
-                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full text-sm">
-                                TensorFlow
-                            </span>
-                        </div>
-                    </div>
+            <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow p-4">
+                    <img src="images/project1.jpg" alt="Project" class="rounded-lg mb-4">
+                    <h3 class="font-bold text-lg">Disease Prediction System</h3>
+                    <p class="text-gray-600 text-sm">A machine learning web app for predicting diabetes, heart disease
+                        & Parkinson’s using FastAPI + Python.</p>
+                    <div class="mt-2 text-sm text-indigo-600">#Python #ML #FastAPI</div>
                 </div>
-                <!-- Add more project cards as needed -->
+                <!-- Add more projects here -->
             </div>
         </div>
     </section>
@@ -122,31 +84,22 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="max-w-5xl mx-auto" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-12 text-center">Skills & Expertise</h2>
+            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Technical Skills</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Python</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <!-- Add more skills bars -->
-                    </div>
+                    <h3 class="font-bold text-xl mb-4">Tech Stack</h3>
+                    <ul class="space-y-2">
+                        <li>Python, JavaScript, C++</li>
+                        <li>TensorFlow, Scikit-learn, OpenCV</li>
+                        <li>FastAPI, Django, React</li>
+                    </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Soft Skills</h3>
+                    <h3 class="font-bold text-xl mb-4">Tools</h3>
                     <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <span class="w-4 h-4 bg-indigo-600 rounded-full mr-2"></span>
-                            Communication
-                        </li>
-                        <!-- Add more soft skills -->
+                        <li>Git & GitHub</li>
+                        <li>VSCode, Jupyter</li>
+                        <li>Figma, Canva</li>
                     </ul>
                 </div>
             </div>
@@ -154,38 +107,29 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 bg-gray-100 dark:bg-gray-800">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-12">Get In Touch</h2>
-            <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8">
-                <form class="space-y-6">
-                    <input type="text" placeholder="Your Name" 
-                           class="w-full px-4 py-3 rounded-lg border dark:bg-gray-800">
-                    <input type="email" placeholder="Your Email" 
-                           class="w-full px-4 py-3 rounded-lg border dark:bg-gray-800">
-                    <textarea placeholder="Your Message" rows="5" 
-                              class="w-full px-4 py-3 rounded-lg border dark:bg-gray-800"></textarea>
-                    <button type="submit" 
-                            class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full transition">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+    <section id="contact" class="py-20 px-6 bg-gray-100">
+        <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name"
+                    class="w-full border px-4 py-2 rounded-lg focus:outline-none">
+                <input type="email" placeholder="Your Email"
+                    class="w-full border px-4 py-2 rounded-lg focus:outline-none">
+                <textarea rows="5" placeholder="Your Message"
+                    class="w-full border px-4 py-2 rounded-lg focus:outline-none"></textarea>
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-full">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 text-center">
-        <p>© 2025 Manav Jitubhai Luhar. All rights reserved.</p>
+    <footer class="text-center py-6 text-sm text-gray-500">
+        © 2025 Manav Jitubhai Luhar. All rights reserved.
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 800 });
     </script>
 </body>
+
 </html>
