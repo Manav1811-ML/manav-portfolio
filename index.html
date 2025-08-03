@@ -8,7 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/6b60d6f67d.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+    @media (max-width: 640px) {
+        .container {
+            padding: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    </style>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -17,28 +28,85 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
+    
+    
     <!-- Navbar -->
     <nav class="fixed top-0 w-full bg-white shadow-md z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="profile-image.JPG" alt="Manav" class="w-10 h-10 rounded-full">
-                <span class="text-xl font-bold text-indigo-600">Manav</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <span class="text-xl font-bold text-indigo-600">@Manav10</span>
             </div>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#about" class="hover:text-indigo-600">About</a>
-                <a href="#projects" class="hover:text-indigo-600">Projects</a>
-                <a href="#skills" class="hover:text-indigo-600">Skills</a>
-                <a href="#contact" class="hover:text-indigo-600">Contact</a>
+            <!-- Mobile menu button -->
+            <div class="flex items-center md:hidden">
+                <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop menu -->
+            <div class="hidden md:flex md:items-center md:space-x-6">
+                <a href="#about" class="hover:text-indigo-600 transition">About</a>
+                <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+                <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
             </div>
         </div>
-    </nav>
+    </div>
+    <!-- Mobile menu -->
+    <div class="md:hidden mobile-menu hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#about" class="block px-3 py-2 hover:text-indigo-600">About</a>
+            <a href="#projects" class="block px-3 py-2 hover:text-indigo-600">Projects</a>
+            <a href="#skills" class="block px-3 py-2 hover:text-indigo-600">Skills</a>
+            <a href="#contact" class="block px-3 py-2 hover:text-indigo-600">Contact</a>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="min-h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
         style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80');">
         <div class="bg-black/60 p-10 rounded-lg max-w-3xl text-white" data-aos="fade-up">
+            <img src="profile-image.JPG" alt="Manav" class="w-24 h-24 rounded-full mx-auto mb-4">
             <h1 class="text-5xl font-bold mb-4">Hi, I'm Manav</h1>
             <p class="text-xl mb-6">Computer Vision Engineer | Study Abroad Consultant</p>
+            <!-- Social Links -->
+<div class="flex justify-center gap-6 mt-6 text-white">
+    <a href="https://www.linkedin.com/in/manav-luhar-814534253" 
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Connect with Manav on LinkedIn"
+       aria-label="LinkedIn Profile"
+       class="hover:text-indigo-400 transform hover:scale-125 transition duration-300">
+        <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="https://github.com/YOUR_GITHUB" 
+       target="_blank"
+       rel="noopener noreferrer"
+       title="View Manav's GitHub Projects"
+       aria-label="GitHub Profile"
+       class="hover:text-indigo-400 transform hover:scale-125 transition duration-300">
+        <i class="fab fa-github fa-2x"></i>
+    </a>
+    <a href="https://instagram.com/YOUR_INSTAGRAM" 
+       target="_blank"
+       rel="noopener noreferrer"
+       title="Follow Manav on Instagram"
+       aria-label="Instagram Profile"
+       class="hover:text-pink-400 transform hover:scale-125 transition duration-300">
+        <i class="fab fa-instagram fa-2x"></i>
+    </a>
+    <a href="mailto:youremail@example.com"
+       title="Send Manav an email"
+       aria-label="Email Contact"
+       class="hover:text-red-400 transform hover:scale-125 transition duration-300">
+        <i class="fas fa-envelope fa-2x"></i>
+    </a>
+</div>
+
             <div class="flex justify-center gap-4">
                 <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-full">Contact Me</a>
                 <a href="#projects" class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full">View Projects</a>
@@ -64,46 +132,231 @@
     </section>
 
     <!-- Projects Section -->
+    
     <section id="projects" class="py-20 px-6 bg-gray-100">
         <div class="max-w-6xl mx-auto" data-aos="fade-up">
             <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+
+        <!-- Project-1 -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white rounded-xl shadow p-4">
-                    <img src="project1.jpg" alt="Project" class="rounded-lg mb-4">
-                    <h3 class="font-bold text-lg">Disease Prediction System</h3>
-                    <p class="text-gray-600 text-sm">A machine learning web app for predicting diabetes, heart disease
+                    <img src="project1.webp" alt="Project" class="rounded-lg mb-4">
+                    <h3 class="font-bold text-lg">Multiple Disease Prediction System</h3>
+                    <p class="text-gray-600 text-sm">A machine learning web app for predicting Diabetes, Heart disease
                         & Parkinson’s using FastAPI + Python.</p>
-                    <div class="mt-2 text-sm text-indigo-600">#Python #ML #FastAPI</div>
+                    <div class="mt-2 text-sm text-indigo-600">
+                        Python TensorFlow Pytorch FastAPI
+                    </div>
                 </div>
-                <!-- Add more projects here -->
+
+        <!-- Project-2 -->
+        <div class="bg-white rounded-xl shadow p-4">
+                <img src="project2.jpg" alt="Diamond Recognition Project" class="rounded-lg mb-4">
+                <h3 class="font-bold text-lg">Diamond Recognition System</h3>
+                <p class="text-gray-600 text-sm">
+                     An AI-powered system for analyzing and classifying diamonds using computer vision and deep learning techniques.
+                </p>
+                <div class="mt-2 text-sm text-indigo-600">
+                 Python OpenCV TensorFlow Deep Learning
+                 </div>
+         </div>
+
+        <!-- Project-3 -->
+        <div class="bg-white rounded-xl shadow p-4">
+            <img src="project3.png" alt="Kids Jungle Adventure Game" class="rounded-lg mb-4">
+            <h3 class="font-bold text-lg">Kids Jungle Adventure Platform Game</h3>
+            <p class="text-gray-600 text-sm">
+                Designed and developed an educational 2D platformer game for children ages 7-10 using GDevelop. 
+                Features jungle-themed levels with engaging puzzles, kid-friendly controls, and entertaining 
+                gameplay mechanics that help develop problem-solving skills.
+            </p>
+            <div class="mt-2 text-sm text-indigo-600">
+                GDevelop Game-Design 2D-Platform Educational-Gaming Kids-Entertainment
+            </div>
+        </div>
+        
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6">
-        <div class="max-w-5xl mx-auto" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-xl mb-4">Tech Stack</h3>
-                    <ul class="space-y-2">
-                        <li>Python, JavaScript, C++</li>
-                        <li>TensorFlow, Scikit-learn, OpenCV</li>
-                        <li>FastAPI, Django, React</li>
-                    </ul>
+    <!-- All Skills -->
+        <section id="skills" class="py-20 px-6">
+    <div class="max-w-5xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-12 text-center">Skills & Expertise</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Programming Languages -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="font-bold text-xl mb-6 text-center">Programming Languages</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+                             alt="Python" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-blue-600 font-medium">Python</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-yellow-50 hover:to-yellow-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+                             alt="JavaScript" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-yellow-600 font-medium">JavaScript</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" 
+                             alt="C++" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-blue-600 font-medium">C++</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-red-50 hover:to-red-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" 
+                             alt="Java" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-red-600 font-medium">Java</span>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="font-bold text-xl mb-4">Tools</h3>
-                    <ul class="space-y-2">
-                        <li>Git & GitHub</li>
-                        <li>VSCode, Jupyter</li>
-                        <li>Figma, Canva</li>
-                    </ul>
+            </div>
+
+            <!-- Frameworks & Tools -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="font-bold text-xl mb-6 text-center">Frameworks & Tools</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" 
+                             alt="TensorFlow" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-orange-600 font-medium">TensorFlow</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg" 
+                             alt="OpenCV" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-green-600 font-medium">OpenCV</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-pink-50 hover:to-pink-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" 
+                             alt="PyTorch" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-pink-600 font-medium">PyTorch</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-cyan-50 hover:to-cyan-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" 
+                             alt="Docker" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-cyan-600 font-medium">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design & Other -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="font-bold text-xl mb-6 text-center">Design & Other</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-purple-50 hover:to-purple-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" 
+                             alt="Figma" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-purple-600 font-medium">Figma</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-pink-50 hover:to-pink-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" 
+                             alt="Canva" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-pink-600 font-medium">Canva</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" 
+                             alt="VS Code" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-blue-600 font-medium">VS Code</span>
+                    </div>
+                    <div class="flex items-center space-x-2 p-3 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 
+                                rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" 
+                             alt="Git" class="w-8 h-8 group-hover:animate-bounce">
+                        <span class="group-hover:text-orange-600 font-medium">Git</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+
+<section id="achievements" class="py-20 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-12 text-center">Achievements & Certifications</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Research Paper Certificate -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <i class="fas fa-scroll text-indigo-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4">Research Publication</h3>
+                <!-- Certificate Image Container -->
+                <div class="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow">
+                    <img src="research-certificate.jpg" 
+                         alt="Research Paper Certificate" 
+                         class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    <!-- Overlay on hover -->
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to view</span>
+                    </div>
+                </div>
+                <div class="space-y-2 text-gray-600">
+                    <p class="text-center">Published Research paper on Batch Size Optimization in CNN+Inceptoin-Based Skin Cancer Detection</p>
+                    <div class="flex items-center justify-center space-x-2 text-sm mt-2">
+                        <i class="fas fa-calendar-alt text-indigo-600"></i>
+                        <span>July 2025</span>
+                    </div>
+                    <!-- Lightbox trigger -->
+                    <button onclick="openLightbox('research-certificate.jpg')" 
+                            class="w-full mt-4 py-2 px-4 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                        View Full Certificate
+                    </button>
+                </div>
+            </div>
+
+            <!-- Study Abroad Consultant Certificate -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div class="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <i class="fas fa-graduation-cap text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-center mb-4">Study Abroad Consultant Certification</h3>
+                <!-- Certificate Image Container -->
+                <div class="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow">
+                    <img src="consultant-certificate.jpg" 
+                         alt="Study Abroad Consultant Certificate" 
+                         class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    <!-- Overlay on hover -->
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to view</span>
+                    </div>
+                </div>
+                <div class="space-y-2 text-gray-600">
+                    <p class="text-center">Certified Educational Consultant for International Studies</p>
+                    <div class="flex items-center justify-center space-x-2 text-sm mt-2">
+                        <i class="fas fa-calendar-alt text-purple-600"></i>
+                        <span>May 2025</span>
+                    </div>
+                    <!-- Lightbox trigger -->
+                    <button onclick="openLightbox('consultant-certificate.jpg')" 
+                            class="w-full mt-4 py-2 px-4 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition-colors duration-300">
+                        View Full Certificate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="certificateLightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl">&times;</button>
+        <img id="lightboxImage" src="" alt="Certificate" class="max-w-[90%] max-h-[90vh] object-contain">
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6 bg-gray-100">
