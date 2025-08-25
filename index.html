@@ -406,20 +406,25 @@
 </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 bg-gray-100">
-        <div class="max-w-xl mx-auto text-center" data-aos="fade-up">
-            <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-            <form class="space-y-4">
-                <input type="text" placeholder="Your Name"
-                    class="w-full border px-4 py-2 rounded-lg focus:outline-none">
-                <input type="email" placeholder="Your Email"
-                    class="w-full border px-4 py-2 rounded-lg focus:outline-none">
-                <textarea rows="5" placeholder="Your Message"
-                    class="w-full border px-4 py-2 rounded-lg focus:outline-none"></textarea>
-                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-full">Send Message</button>
-            </form>
-        </div>
-    </section>
+    <form action="https://formspree.io/f/mrbaggan" method="POST" class="space-y-4">
+    <input type="text" name="name" placeholder="Your Name"
+        class="w-full border px-4 py-2 rounded-lg focus:outline-none" required>
+    <input type="email" name="email" placeholder="Your Email"
+        class="w-full border px-4 py-2 rounded-lg focus:outline-none" required>
+    <textarea name="message" rows="5" placeholder="Your Message"
+        class="w-full border px-4 py-2 rounded-lg focus:outline-none" required></textarea>
+
+    <!-- Optional: Subject line in email -->
+    <input type="hidden" name="_subject" value="New Contact from Portfolio Website">
+
+    <!-- Optional: Redirect after submission -->
+    <input type="hidden" name="_next" value="https://manav1811-ml.github.io/manav-portfolio/thankyou.html">
+
+    <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">
+        Send Message
+    </button>
+</form>
+
 
     <!-- Footer -->
     <footer class="text-center py-6 text-sm text-gray-500">
@@ -432,3 +437,7 @@
 </body>
 
 </html>
+
+
+<!-- Script -->
+ 
