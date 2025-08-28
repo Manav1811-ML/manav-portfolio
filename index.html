@@ -468,6 +468,35 @@
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
+
+    // Lightbox Functions
+    
+    // Open lightbox with selected image
+  function openLightbox(imageSrc) {
+    document.getElementById("lightboxImage").src = imageSrc;
+    document.getElementById("certificateLightbox").classList.remove("hidden");
+  }
+
+  // Close lightbox
+  function closeLightbox() {
+    document.getElementById("certificateLightbox").classList.add("hidden");
+    document.getElementById("lightboxImage").src = "";
+  }
+
+  // Optional: close when clicking outside the image
+  document.getElementById("certificateLightbox").addEventListener("click", function(e) {
+    if (e.target === this) {
+      closeLightbox();
+    }
+  });
+
+  // Optional: close when pressing Esc
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+
     </script>
 </body>
 
