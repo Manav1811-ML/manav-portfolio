@@ -19,11 +19,21 @@
             font-size: 2.5rem;
         }
     }
-    </style>
-    <style>
-        body {
+
+@keyframes fadeZoom {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeZoom {
+  animation: fadeZoom 1s ease forwards;
+  opacity: 0;
+}
+
+body {
             font-family: 'Inter', sans-serif;
         }
+
     </style>
 </head>
 
@@ -238,6 +248,89 @@
             </div>
         </div>
     </div>
+</section>
+
+<!-- EduHunt Study Overseas Section -->
+<section id="eduhunt" class="py-20 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+  <div class="max-w-6xl mx-auto" data-aos="fade-up">
+    
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold">EduHunt – Study Overseas</h2>
+      <p class="text-lg text-gray-600 mt-4 italic">"Dream Big, Study Far"</p>
+    </div>
+
+    <!-- Flex Layout -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left: Logo & Info -->
+      <div class="text-center md:text-left">
+        <img src="eduhunt-logo.jpg" alt="Eduhunt Logo" class="w-40 mx-auto md:mx-0 mb-6">
+        <p class="text-lg font-semibold">📞 +91 97235 44393</p>
+        <p class="text-sm text-gray-600">GST.NO: 24ABMPL7430Q1Z3</p>
+        <p class="mt-4 text-gray-700">Guiding students towards their global education journey with expert counseling and trusted partnerships.</p>
+      </div>
+
+      <!-- Right: Countries with Flags -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 text-center">
+        
+        <!-- Each Flag -->
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[100ms]">
+          <img src="https://flagcdn.com/w80/us.png" alt="USA" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">USA</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[200ms]">
+          <img src="https://flagcdn.com/w80/ca.png" alt="Canada" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Canada</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[300ms]">
+          <img src="https://flagcdn.com/w80/gb.png" alt="UK" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">UK</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[400ms]">
+          <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Australia</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[500ms]">
+          <img src="https://flagcdn.com/w80/de.png" alt="Germany" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Germany</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[600ms]">
+          <img src="https://flagcdn.com/w80/fr.png" alt="France" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">France</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[700ms]">
+          <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">New Zealand</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[800ms]">
+          <img src="https://flagcdn.com/w80/it.png" alt="Italy" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Italy</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[900ms]">
+          <img src="https://flagcdn.com/w80/pl.png" alt="Poland" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Poland</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[1000ms]">
+          <img src="https://flagcdn.com/w80/ie.png" alt="Ireland" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Ireland</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[1100ms]">
+          <img src="https://flagcdn.com/w80/es.png" alt="Spain" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Spain</p>
+        </div>
+        <div class="transform transition duration-700 hover:scale-110 animate-fadeZoom delay-[1200ms]">
+          <img src="https://flagcdn.com/w80/nl.png" alt="Netherlands" class="h-14 mx-auto rounded shadow-md">
+          <p class="mt-2 font-medium">Netherlands</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certification Footer -->
+    <div class="text-right mt-10 text-sm text-gray-500 italic">
+      – Certified Career Counsellor for International Studies (Edumilestones)
+    </div>
+  </div>
 </section>
 
     <!-- Skills Section -->
