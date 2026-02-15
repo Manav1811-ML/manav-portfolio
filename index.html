@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manav Jitubhai Luhar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>\
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/6b60d6f67d.js" crossorigin="anonymous"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
     @media (max-width: 640px) {
         .container {
@@ -29,6 +32,20 @@
   animation: fadeZoom 1s ease forwards;
   opacity: 0;
 }
+.dark-mode {
+  background-color: #0f172a !important;
+  color: white !important;
+}
+
+.dark-mode .bg-white {
+  background-color: #1e293b !important;
+}
+
+.dark-mode .text-gray-600,
+.dark-mode .text-gray-700,
+.dark-mode .text-gray-500 {
+  color: #cbd5e1 !important;
+}
 
 body {
             font-family: 'Inter', sans-serif;
@@ -39,7 +56,10 @@ body {
 
 <body class="bg-gray-50 text-gray-800">
     
-    
+  <!-- Scroll Progress Bar -->
+<div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-indigo-600 z-[9999]" style="width:0%"></div>
+  
+
     <!-- Navbar -->
 <nav class="fixed top-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,6 +76,11 @@ body {
         <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
         <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
         <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+        <button onclick="toggleDarkMode()" 
+        class="ml-4 text-xl hover:scale-110 transition">
+          🌙
+        </button>
+
       </div>
 
       <!-- Mobile Menu Button -->
@@ -86,7 +111,10 @@ body {
         <div class="bg-black/60 p-10 rounded-lg max-w-3xl text-white" data-aos="fade-up">
             <img src="profile-image.JPG" alt="Manav" class="w-24 h-24 rounded-full mx-auto mb-4">
             <h1 class="text-5xl font-bold mb-4">Hi, I'm Manav</h1>
-            <p class="text-xl mb-6">Computer Vision Engineer | Study Abroad Consultant</p>
+            <h2 class="text-xl md:text-2xl text-indigo-600 font-semibold mt-4">
+              <span id="typing-text"></span>
+            </h2>
+
             <!-- Social Links -->
 <div class="flex justify-center gap-6 mt-6 text-white">
     <a href="https://www.linkedin.com/in/manav-luhar-814534253" 
@@ -414,6 +442,37 @@ body {
       <img src="logos\Monash University.jpg" alt="Monash" class="h-16 w-auto object-contain">
       <img src="logos\The University of Melbourne.webp" alt="Melbourne" class="h-16 w-auto object-contain">
 
+      <!-- USA -->
+      <img src="logos\University of California.jpg" alt="California" class="h-16 w-auto object-contain">
+      <img src="logos\Massachusetts Institute of Technology.webp" alt="Massachusetts" class="h-16 w-auto object-contain">
+      <img src="logos\Georgia Institute of Technology.webp" alt="Georgia" class="h-16 w-auto object-contain">
+      <img src="logos\University-of-Washington.webp" alt="Washington" class="h-16 w-auto object-contain">
+      <img src="logos\Columbia University.webp" alt="Columbia" class="h-16 w-auto object-contain">
+
+      <!-- Canada -->
+      <img src="logos\McGill University.jpg" alt="McGill" class="h-16 w-auto object-contain">
+      <img src="logos\The University of British Columbia.webp" alt="British Columbia" class="h-16 w-auto object-contain">
+      <img src="logos\University of Toronto.webp" alt="Toronto" class="h-16 w-auto object-contain">
+      <img src="logos\University_of_Waterloo.png" alt="Waterloo" class="h-16 w-auto object-contain">
+
+      <!-- UK -->
+      <img src="logos\Liverpool John Moores University, Liverpool.webp" alt="Liverpool" class="h-16 w-auto object-contain">
+      <img src="logos\The University of Sheffield International College.webp" alt="Sheffield" class="h-16 w-auto object-contain">
+      <img src="logos\University Academy 92.webp" alt="Academy 92" class="h-16 w-auto object-contain">
+      <img src="logos\University of Leeds.webp" alt="Leeds" class="h-16 w-auto object-contain">
+
+      <!-- Germany -->
+      <img src="logos\GISMA Business School Hochschule.png" alt="GISMA" class="h-16 w-auto object-contain">
+      <img src="logos\Technical University of Munich.webp" alt="LMU Munich" class="h-16 w-auto object-contain">
+      <img src="logos\Heidelberg University - Germany.webp" alt="Heidelberg" class="h-16 w-auto object-contain">
+      <img src="logos\Technical University of Munich.webp" alt="TUM" class="h-16 w-auto object-contain">
+
+      <!-- Australia -->
+      <img src="logos\University of Queensland.png" alt="Queensland" class="h-16 w-auto object-contain">
+      <img src="logos\University of Sydney.png" alt="Sydney" class="h-16 w-auto object-contain">
+      <img src="logos\Monash University.jpg" alt="Monash" class="h-16 w-auto object-contain">
+      <img src="logos\The University of Melbourne.webp" alt="Melbourne" class="h-16 w-auto object-contain">
+
     </div>
   </div>
 </div>
@@ -421,16 +480,18 @@ body {
 <!-- CSS -->
 <style>
   @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-scroll {
-    animation: scroll 40s linear infinite;
-    display: flex;
-  } 
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 35s linear infinite;
+  width: max-content;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
 </style>
 
 
@@ -787,7 +848,12 @@ body {
     </footer>
 
     <script>
-        AOS.init({ duration: 800 });
+        AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out"
+});
+
         
     //Mobile Menu Toggle
         const btn = document.getElementById('menu-btn');
@@ -796,6 +862,20 @@ body {
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
+
+  // Typing Animation
+var typed = new Typed("#typing-text", {
+  strings: [
+    "AI Engineer",
+    "Study Consultant",
+    "Machine Learning Developer",
+    "FastAPI Backend Developer"
+  ],
+  typeSpeed: 60,
+  backSpeed: 40,
+  backDelay: 1500,
+  loop: true
+});
 
     // Lightbox Functions
     
@@ -824,6 +904,11 @@ body {
       closeLightbox();
     }
   });
+//Dark mode toggle
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
 
  let testimonials = [
     {
@@ -834,12 +919,12 @@ body {
     {
       text: "Great work on the Node.js project during his internship.",
       name: "Mr. Shah",
-      role: "Upstair Technologies LLP"
+      role: "Employee,Upstair Technologies LLP"
     },
     {
       text: "Delivered excellent results in Computer Vision tasks.",
-      name: "Ms. Desai",
-      role: "Techno Smart Diamond Solutions"
+      name: "Ajay Bhatt",
+      role: "General Manager,Techno Smart Diamond Solutions"
     }
   ];
 
@@ -877,9 +962,27 @@ body {
   // Auto-slide every 6s
   setInterval(() => nextTestimonial(), 6000);
 
+  // Scroll Progress Bar
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const progress = (scrollTop / scrollHeight) * 100;
+  document.getElementById("scroll-progress").style.width =
+    progress + "%";
+});         
+
 
 
     </script>
+    <a href="https://wa.me/919723544393"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition z-50">
+   <i class="fab fa-whatsapp text-2xl"></i>
+</a>
+
 </body>
 
 </html>
