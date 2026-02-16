@@ -6,52 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manav Jitubhai Luhar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>\
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/6b60d6f67d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 
-    <style>
-    @media (max-width: 640px) {
-        .container {
-            padding: 1rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-    }
-
-@keyframes fadeZoom {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-.animate-fadeZoom {
-  animation: fadeZoom 1s ease forwards;
-  opacity: 0;
-}
-.dark-mode {
-  background-color: #0f172a !important;
-  color: white !important;
-}
-
-.dark-mode .bg-white {
-  background-color: #1e293b !important;
-}
-
-.dark-mode .text-gray-600,
-.dark-mode .text-gray-700,
-.dark-mode .text-gray-500 {
-  color: #cbd5e1 !important;
-}
-
-body {
-            font-family: 'Inter', sans-serif;
-        }
-
-    </style>
+    
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -847,145 +811,17 @@ body {
         © 2025 Manav Jitubhai Luhar. All rights reserved.
     </footer>
 
-    <script>
-        AOS.init({
-  duration: 1000,
-  once: true,
-  easing: "ease-in-out"
-});
-
-        
-    //Mobile Menu Toggle
-        const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-  // Typing Animation
-var typed = new Typed("#typing-text", {
-  strings: [
-    "AI Engineer",
-    "Study Consultant",
-    "Machine Learning Developer",
-    "FastAPI Backend Developer"
-  ],
-  typeSpeed: 60,
-  backSpeed: 40,
-  backDelay: 1500,
-  loop: true
-});
-
-    // Lightbox Functions
     
-    // Open lightbox with selected image
-  function openLightbox(imageSrc) {
-    document.getElementById("lightboxImage").src = imageSrc;
-    document.getElementById("certificateLightbox").classList.remove("hidden");
-  }
-
-  // Close lightbox
-  function closeLightbox() {
-    document.getElementById("certificateLightbox").classList.add("hidden");
-    document.getElementById("lightboxImage").src = "";
-  }
-
-  // Optional: close when clicking outside the image
-  document.getElementById("certificateLightbox").addEventListener("click", function(e) {
-    if (e.target === this) {
-      closeLightbox();
-    }
-  });
-
-  // Optional: close when pressing Esc
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-      closeLightbox();
-    }
-  });
-//Dark mode toggle
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
-
-
- let testimonials = [
-    {
-      text: "Manav is a quick learner and shows great potential in ML projects.",
-      name: "Ronak N Patel",
-      role: "Professor, Charusat University"
-    },
-    {
-      text: "Great work on the Node.js project during his internship.",
-      name: "Mr. Shah",
-      role: "Employee,Upstair Technologies LLP"
-    },
-    {
-      text: "Delivered excellent results in Computer Vision tasks.",
-      name: "Ajay Bhatt",
-      role: "General Manager,Techno Smart Diamond Solutions"
-    }
-  ];
-
-  let tIndex = 0;
-  const tBox = document.getElementById("testimonial-box");
-
-  function renderTestimonial() {
-    // Add fade-out effect
-    tBox.classList.remove("opacity-100", "translate-x-0");
-    tBox.classList.add("opacity-0", "-translate-x-6");
-
-    setTimeout(() => {
-      tBox.innerHTML = `
-        <p class="text-lg italic text-gray-700 mb-6">"${testimonials[tIndex].text}"</p>
-        <h4 class="font-semibold">${testimonials[tIndex].name}</h4>
-        <p class="text-sm text-gray-500">${testimonials[tIndex].role}</p>
-      `;
-
-      // Add fade-in effect
-      tBox.classList.remove("opacity-0", "-translate-x-6");
-      tBox.classList.add("opacity-100", "translate-x-0");
-    }, 400); // delay matches transition
-  }
-
-  function prevTestimonial() {
-    tIndex = (tIndex - 1 + testimonials.length) % testimonials.length;
-    renderTestimonial();
-  }
-
-  function nextTestimonial() {
-    tIndex = (tIndex + 1) % testimonials.length;
-    renderTestimonial();
-  }
-
-  // Auto-slide every 6s
-  setInterval(() => nextTestimonial(), 6000);
-
-  // Scroll Progress Bar
-window.addEventListener("scroll", () => {
-  const scrollTop = document.documentElement.scrollTop;
-  const scrollHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-
-  const progress = (scrollTop / scrollHeight) * 100;
-  document.getElementById("scroll-progress").style.width =
-    progress + "%";
-});         
-
-
-
-    </script>
     <a href="https://wa.me/919723544393"
    target="_blank"
    class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition z-50">
    <i class="fab fa-whatsapp text-2xl"></i>
 </a>
 
+<script src="script.js"></script>
 </body>
-
 </html>
+
 
 
 <!-- Script -->

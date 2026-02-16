@@ -1,0 +1,55 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mobile Fix */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Fade Zoom Animation */
+@keyframes fadeZoom {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeZoom {
+  animation: fadeZoom 1s ease forwards;
+  opacity: 0;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #0f172a !important;
+  color: white !important;
+}
+
+.dark-mode .bg-white {
+  background-color: #1e293b !important;
+}
+
+.dark-mode .text-gray-600,
+.dark-mode .text-gray-700,
+.dark-mode .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+/* Partner Logos Scroll */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 35s linear infinite;
+  width: max-content;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
