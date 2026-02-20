@@ -14,7 +14,6 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-
     
 </head>
 
@@ -70,59 +69,79 @@
 
 
     <!-- Hero Section -->
-    <section class="min-h-screen bg-cover bg-center flex items-center justify-center text-center px-6"
-        style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80');">
-        <div class="bg-black/60 p-10 rounded-lg max-w-3xl text-white" data-aos="fade-up">
-            <img src="profile-image.JPG" alt="Manav" class="w-24 h-24 rounded-full mx-auto mb-4">
-            <h1 class="text-5xl font-bold mb-4">Hi, I'm Manav</h1>
-            <h2 class="text-xl md:text-2xl text-indigo-600 font-semibold mt-4">
-              <span id="typing-text"></span>
-            </h2>
+<section class="min-h-screen bg-cover bg-center flex items-center justify-center px-6 relative"
+    style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80');">
 
-            <!-- Social Links -->
-<div class="flex justify-center gap-6 mt-6 text-white">
-    <a href="https://www.linkedin.com/in/manav-luhar-814534253" 
-       target="_blank"
-       rel="noopener noreferrer"
-       title="Connect with Manav on LinkedIn"
-       aria-label="LinkedIn Profile"
-       class="hover:text-indigo-400 transform hover:scale-125 transition duration-300">
-        <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="https://github.com/YOUR_GITHUB" 
-       target="_blank"
-       rel="noopener noreferrer"
-       title="View Manav's GitHub Projects"
-       aria-label="GitHub Profile"
-       class="hover:text-indigo-400 transform hover:scale-125 transition duration-300">
-        <i class="fab fa-github fa-2x"></i>
-    </a>
-    <a href="https://instagram.com/YOUR_INSTAGRAM" 
-       target="_blank"
-       rel="noopener noreferrer"
-       title="Follow Manav on Instagram"
-       aria-label="Instagram Profile"
-       class="hover:text-pink-400 transform hover:scale-125 transition duration-300">
-        <i class="fab fa-instagram fa-2x"></i>
-    </a>
-    <a href="mailto:youremail@example.com"
-       title="Send Manav an email"
-       aria-label="Email Contact"
-       class="hover:text-red-400 transform hover:scale-125 transition duration-300">
-        <i class="fas fa-envelope fa-2x"></i>
-    </a>
-</div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
 
-            <div class="flex justify-center gap-4 flex-wrap">
-    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-full">Contact Me</a>
-    <a href="#projects" class="bg-white/20 hover:bg-white/30 px-6 py-2 rounded-full">View Projects</a>
-    <a href="Manav_Luhar_Resume.pdf" download 
-       class="bg-green-600 hover:bg-green-700 px-6 py-2 rounded-full text-white transition">
-       📄 Download Resume
-    </a>
-</div>
+    <div class="relative max-w-3xl w-full text-center text-white py-24 px-8 rounded-xl backdrop-blur-md"
+         data-aos="fade-up">
+
+        <!-- Profile -->
+        <img src="profile-image.JPG"
+             alt="Manav"
+             class="w-28 h-28 rounded-full mx-auto mb-6 shadow-xl border-4 border-white/20">
+
+        <!-- Name -->
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+            Hi, I'm Manav
+        </h1>
+
+        <!-- Typing -->
+        <h2 class="text-xl md:text-2xl text-indigo-400 font-semibold mb-10">
+            <span id="typing-text"></span>
+        </h2>
+
+        <!-- Social Links -->
+        <div class="flex justify-center gap-6 mb-12">
+            <a href="https://www.linkedin.com/in/manav-luhar-814534253"
+               target="_blank"
+               class="social-btn linkedin">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+            </a>
+
+            <a href="https://github.com/Manav1811"
+               target="_blank"
+               class="social-btn github">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+
+            <a href="https://www.instagram.com/manav_10_7/"
+               target="_blank"
+               class="social-btn instagram">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+
+            <a href="mailto:manavluhar18@gmail.com"
+               class="social-btn email">
+                <i class="fas fa-envelope text-2xl"></i>
+            </a>
         </div>
-    </section>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-5 flex-wrap">
+            <a href="#contact"
+               class="bg-indigo-600 hover:bg-indigo-700 px-7 py-3 rounded-full font-medium transition">
+               Contact Me
+            </a>
+
+            <a href="#projects"
+               class="bg-white/20 hover:bg-white/30 px-7 py-3 rounded-full font-medium transition backdrop-blur-sm">
+               View Projects
+            </a>
+
+            <a href="Manav_Luhar_Resume.pdf"
+               download
+               class="bg-green-600 hover:bg-green-700 px-7 py-3 rounded-full font-medium transition">
+               📄 Download Resume
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
 
     <!-- About Section -->
     <section id="about" class="py-20 px-6">
@@ -820,9 +839,7 @@
 
 <script src="script.js"></script>
 </body>
+
 </html>
 
-
-
-<!-- Script -->
  
