@@ -1,193 +1,1676 @@
-body.dark-mode #eduhunt,
-body.dark-mode #achievements,
-body.dark-mode #contact {
-  background: #0f172a !important;
+/* =====================================================
+   FUTURISTIC AI/ML PORTFOLIO — ENHANCED STYLING
+   Targets existing Tailwind HTML structure.
+   ===================================================== */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* ── CSS Custom Properties ── */
+:root {
+  --bg-deep: #050a18;
+  --bg-panel: #0a1128;
+  --bg-card: rgba(10, 17, 40, 0.75);
+  --glass: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --neon-cyan: #00f0ff;
+  --neon-violet: #7b2ff7;
+  --neon-magenta: #ff2daa;
+  --neon-green: #00ff88;
+
+  --text-bright: #e8edf5;
+  --text-dim: #8892b0;
+  --text-muted: #5a6380;
+
+  --grad-main: linear-gradient(135deg, #00f0ff, #7b2ff7, #ff2daa);
+  --glow-cyan: 0 0 15px rgba(0,240,255,0.35), 0 0 45px rgba(0,240,255,0.1);
+  --glow-violet: 0 0 15px rgba(123,47,247,0.35), 0 0 45px rgba(123,47,247,0.1);
 }
 
+/* ── Smooth Scroll ── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--neon-cyan), var(--neon-violet));
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--neon-cyan);
+  color: var(--bg-deep);
+}
+
+/* ── Base Body — Force dark futuristic theme ── */
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  background-color: var(--bg-deep) !important;
+  color: var(--text-bright) !important;
+  overflow-x: hidden;
+  position: relative;
 }
 
+/* =====================================================
+   PARTICLE / NETWORK CANVAS (injected via JS)
+   ===================================================== */
+#particle-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
 
-.hero-bg {
+/* =====================================================
+   SCROLL PROGRESS BAR — Neon Gradient
+   ===================================================== */
+#scroll-progress {
+  background: var(--grad-main) !important;
+  height: 3px !important;
+  box-shadow: 0 0 12px var(--neon-cyan), 0 0 30px var(--neon-violet);
+  transition: width 0.08s linear;
+}
+
+/* =====================================================
+   NAVBAR — Glassmorphism
+   ===================================================== */
+nav.fixed {
+  background: rgba(5, 10, 24, 0.78) !important;
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border) !important;
+  box-shadow: none !important;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+nav.fixed.scrolled {
+  background: rgba(5, 10, 24, 0.95) !important;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4), 0 0 1px var(--neon-cyan) !important;
+}
+
+/* Nav logo */
+nav .text-indigo-600 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+/* Nav links */
+nav a[href^="#"] {
+  color: var(--text-dim) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a[href^="#"]::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--grad-main);
+  transition: width 0.3s ease;
+  box-shadow: var(--glow-cyan);
+}
+
+nav a[href^="#"]:hover {
+  color: var(--neon-cyan) !important;
+}
+
+nav a[href^="#"]:hover::after {
+  width: 100%;
+}
+
+/* Dark mode button */
+nav button {
+  filter: drop-shadow(0 0 4px rgba(0,240,255,0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+nav button:hover {
+  filter: drop-shadow(0 0 10px rgba(0,240,255,0.6));
+  transform: scale(1.2) rotate(15deg) !important;
+}
+
+/* Mobile menu */
+#mobile-menu {
+  background: rgba(5, 10, 24, 0.96) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+#mobile-menu a {
+  color: var(--text-dim) !important;
+  transition: all 0.3s ease;
+}
+
+#mobile-menu a:hover {
+  color: var(--neon-cyan) !important;
+  background: rgba(0,240,255,0.05) !important;
+  padding-left: 2rem;
+}
+
+/* =====================================================
+   HERO SECTION — Futuristic Overlay + Orbs
+   ===================================================== */
+section.min-h-screen {
+  position: relative;
+}
+
+/* Dark gradient overlay instead of plain black */
+section.min-h-screen > .absolute.inset-0.bg-black\/70 {
+  background: linear-gradient(
+    135deg,
+    rgba(5,10,24,0.93) 0%,
+    rgba(10,17,40,0.88) 40%,
+    rgba(5,10,24,0.95) 100%
+  ) !important;
+}
+
+/* Animated grid behind hero */
+section.min-h-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(rgba(0,240,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,240,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridDrift 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridDrift {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(60px,60px); }
+}
+
+/* Floating neon orbs behind hero */
+section.min-h-screen::after {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,240,255,0.12), transparent 70%);
+  top: -120px; right: -120px;
+  z-index: 1;
+  filter: blur(60px);
+  animation: orbFloat 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px,-40px) scale(1.08); }
+  66% { transform: translate(-25px,25px) scale(0.94); }
+}
+
+/* Hero content container */
+section.min-h-screen .relative.max-w-3xl {
+  z-index: 5;
+  position: relative;
+}
+
+/* ── Profile Image — Clean static style ── */
+section.min-h-screen img[alt="Manav"] {
+  border: 3px solid rgba(0,240,255,0.2) !important;
+  box-shadow: 0 0 20px rgba(0,240,255,0.15);
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Hero Name — Gradient Text ── */
+section.min-h-screen h1 {
+  font-family: 'Orbitron', monospace !important;
+  letter-spacing: 3px;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textShimmer 4s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+@keyframes textShimmer {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* ── Typing subtitle ── */
+section.min-h-screen h2 {
+  font-family: 'Orbitron', monospace !important;
+  text-shadow: 0 0 20px rgba(0,240,255,0.35);
+}
+
+/* Typed.js cursor */
+.typed-cursor {
+  color: var(--neon-cyan) !important;
+  text-shadow: 0 0 10px var(--neon-cyan);
+  animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Social Buttons — Premium Hover ── */
+.social-btn {
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
   position: relative;
   overflow: hidden;
 }
 
-.hero-bg::before {
-  content: "";
+.social-btn::after {
+  content: '';
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(99,102,241,0.3), transparent);
-  top: -200px;
-  right: -200px;
-  z-index: 0;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.hero-bg > div {
+.social-btn:hover {
+  transform: translateY(-8px) scale(1.12);
+  border-color: transparent;
+}
+
+.social-btn:hover::after { opacity: 1; }
+
+.linkedin:hover {
+  background: #0A66C2 !important;
+  box-shadow: 0 8px 30px rgba(10,102,194,0.55) !important;
+}
+.github:hover {
+  background: #6e5494 !important;
+  box-shadow: 0 8px 30px rgba(110,84,148,0.55) !important;
+}
+.instagram:hover {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7) !important;
+  box-shadow: 0 8px 30px rgba(238,42,123,0.55) !important;
+}
+.email:hover {
+  background: #EA4335 !important;
+  box-shadow: 0 8px 30px rgba(234,67,53,0.55) !important;
+}
+
+/* ── Hero Buttons — Futuristic Glow ── */
+section.min-h-screen a[href="#contact"],
+section.min-h-screen a[href="#projects"],
+section.min-h-screen a[href*="Resume"] {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+section.min-h-screen a[href="#contact"] {
+  background: var(--grad-main) !important;
+  color: var(--bg-deep) !important;
+  box-shadow: 0 4px 25px rgba(0,240,255,0.35);
+}
+section.min-h-screen a[href="#contact"]:hover {
+  box-shadow: 0 8px 40px rgba(0,240,255,0.55);
+  transform: translateY(-3px) scale(1.04);
+}
+
+section.min-h-screen a[href="#projects"] {
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+}
+section.min-h-screen a[href="#projects"]:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-3px);
+}
+
+section.min-h-screen a[href*="Resume"] {
+  background: linear-gradient(135deg, #00ff88, #00cc6a) !important;
+  color: var(--bg-deep) !important;
+  box-shadow: 0 4px 25px rgba(0,255,136,0.35);
+}
+section.min-h-screen a[href*="Resume"]:hover {
+  box-shadow: 0 8px 40px rgba(0,255,136,0.55);
+  transform: translateY(-3px) scale(1.04);
+}
+
+/* =====================================================
+   ABOUT SECTION
+   ===================================================== */
+#about {
+  background: var(--bg-deep) !important;
   position: relative;
   z-index: 1;
 }
 
-/* Mobile Fix */
-@media (max-width: 640px) {
-    .container {
-        padding: 1rem;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }
+#about h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
 }
 
-/* Fade Zoom Animation */
-@keyframes fadeZoom {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
+#about p {
+  color: var(--text-dim) !important;
 }
 
-.animate-fadeZoom {
-  animation: fadeZoom 1s ease forwards;
-  opacity: 0;
+/* Gradient banner in About */
+#about .bg-gradient-to-r {
+  background: rgba(10,17,40,0.8) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
 }
 
-/* ============================= */
-/* GLOBAL DARK MODE FIXED       */
-/* ============================= */
-
-body.dark-mode {
-  background-color: #0f172a !important;
-  color: #e2e8f0 !important;
+#about .bg-gradient-to-r:hover {
+  border-color: rgba(0,240,255,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 1px var(--neon-cyan);
+  transform: translateY(-4px);
 }
 
-/* Sections */
-body.dark-mode section {
-  background-color: #0f172a !important;
-  color: #e2e8f0 !important;
+#about .bg-gradient-to-r li {
+  color: var(--text-bright) !important;
 }
 
-/* Navbar */
-body.dark-mode nav {
-  background-color: #1e293b !important;
-  border-bottom: 1px solid #334155;
+/* =====================================================
+   PROJECT CARDS — 3D Tilt + Glow
+   ===================================================== */
+#projects {
+  background: var(--bg-panel) !important;
+  position: relative;
+  z-index: 1;
 }
 
-/* Cards */
-body.dark-mode .bg-white,
-body.dark-mode .bg-gray-100,
-body.dark-mode .bg-indigo-50,
-body.dark-mode .bg-purple-50 {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
+#projects h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  color: transparent !important;
 }
 
-/* Text */
-body.dark-mode .text-gray-600,
-body.dark-mode .text-gray-700,
-body.dark-mode .text-gray-500 {
-  color: #94a3b8 !important;
+/* Project cards */
+#projects .bg-white {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1) !important;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Inputs */
-body.dark-mode input,
-body.dark-mode textarea {
-  background-color: #1e293b !important;
-  color: #e2e8f0 !important;
-  border-color: #334155 !important;
+/* Sweep shimmer on hover */
+#projects .bg-white::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 200%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,240,255,0.04), transparent);
+  transition: left 0.7s ease;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Footer */
-body.dark-mode footer {
-  background-color: #0f172a !important;
-  color: #94a3b8 !important;
+#projects .bg-white:hover {
+  border-color: rgba(0,240,255,0.22) !important;
+  transform: translateY(-10px) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35), 0 0 1px var(--neon-cyan) !important;
 }
 
-/* ===== PREMIUM SOCIAL HOVER ===== */
+#projects .bg-white:hover::before {
+  left: 100%;
+}
 
-.social-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.35s ease;
+/* Project images */
+#projects .bg-white img {
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1) !important;
+}
+
+#projects .bg-white:hover img {
+  transform: scale(1.1) !important;
+}
+
+/* Image holographic overlay */
+#projects .aspect-video {
   position: relative;
 }
 
-/* Lift + scale */
-.social-btn:hover {
-  transform: translateY(-6px) scale(1.1);
+#projects .aspect-video::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,240,255,0.08), rgba(123,47,247,0.08));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+  pointer-events: none;
 }
 
-/* LinkedIn */
-.linkedin:hover {
-  background: #0A66C2;
-  box-shadow: 0 0 20px #0A66C2;
+#projects .bg-white:hover .aspect-video::after {
+  opacity: 1;
 }
 
-/* GitHub */
-.github:hover {
-  background: #24292e;
-  box-shadow: 0 0 20px #24292e;
+/* Project titles */
+#projects h3 {
+  color: var(--text-bright) !important;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Instagram */
-.instagram:hover {
-  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-  box-shadow: 0 0 20px #ee2a7b;
+#projects .text-gray-600 {
+  color: var(--text-dim) !important;
 }
 
-/* Email */
-.email:hover {
-  background: #EA4335;
-  box-shadow: 0 0 20px #EA4335;
+/* Tech tags */
+#projects .bg-indigo-100 {
+  background: rgba(0,240,255,0.08) !important;
+  border: 1px solid rgba(0,240,255,0.12);
+  color: var(--neon-cyan) !important;
+  transition: all 0.3s ease;
 }
 
-/* Cards and boxes */
-.dark-mode .bg-white,
-.dark-mode .bg-gray-100,
-.dark-mode .bg-indigo-50,
-.dark-mode .bg-purple-50 {
-  background-color: var(--bg-card) !important;
-  color: var(--text-main) !important;
+#projects .bg-indigo-100:hover {
+  background: rgba(0,240,255,0.15) !important;
+  box-shadow: 0 0 10px rgba(0,240,255,0.2);
 }
 
-/* Text & muted text */
-.dark-mode .text-gray-600,
-.dark-mode .text-gray-700,
-.dark-mode .text-gray-500 {
+/* =====================================================
+   EDUHUNT SECTION
+   ===================================================== */
+#eduhunt {
+  background: linear-gradient(180deg, var(--bg-deep), var(--bg-panel), var(--bg-deep)) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#eduhunt h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+#eduhunt p {
+  color: var(--text-dim) !important;
+}
+
+#eduhunt .text-lg.font-semibold {
+  color: var(--text-bright) !important;
+}
+
+#eduhunt .text-sm.text-gray-600 {
   color: var(--text-muted) !important;
 }
 
-/* Inputs & forms */
-.dark-mode input,
-.dark-mode textarea,
-.dark-mode form {
-  background-color: var(--bg-card) !important;
-  color: var(--text-main) !important;
-  border-color: var(--border-light) !important;
+#eduhunt .italic {
+  color: var(--neon-cyan) !important;
+  text-shadow: 0 0 15px rgba(0,240,255,0.2);
 }
 
-/* Footer */
-.dark-mode footer {
-  background-color: var(--bg-main) !important;
-  color: var(--text-muted) !important;
+/* Flag cards */
+#eduhunt .bg-white.rounded.shadow-md {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s ease;
 }
 
-/* Partner Logos Scroll */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+#eduhunt .transform.transition:hover .bg-white.rounded.shadow-md {
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
 }
 
+#eduhunt .font-medium {
+  color: var(--text-dim) !important;
+}
+
+/* =====================================================
+   PARTNER LOGOS SCROLL
+   ===================================================== */
 .animate-scroll {
-  animation: scroll 35s linear infinite;
+  animation: scroll 40s linear infinite;
   width: max-content;
 }
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll img {
+  filter: grayscale(100%) brightness(0.6) !important;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+.animate-scroll img:hover {
+  filter: grayscale(0%) brightness(1) !important;
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+/* =====================================================
+   SKILLS SECTION — Neon Hover Cards
+   ===================================================== */
+#skills {
+  background: var(--bg-deep) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#skills h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* Category cards */
+#skills > div > div > div.bg-white {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1) !important;
+}
+
+#skills > div > div > div.bg-white:hover {
+  border-color: rgba(0,240,255,0.2) !important;
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3), 0 0 1px var(--neon-cyan) !important;
+}
+
+#skills h3 {
+  font-family: 'Orbitron', monospace !important;
+  color: var(--neon-cyan) !important;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+}
+
+/* Individual skill items */
+#skills .group {
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1) !important;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+#skills .group:hover {
+  background: rgba(0,240,255,0.04) !important;
+  border-color: rgba(0,240,255,0.12) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2), var(--glow-cyan);
+}
+
+#skills .group img {
+  transition: all 0.4s ease !important;
+}
+
+#skills .group:hover img {
+  transform: scale(1.15) rotate(5deg) !important;
+  filter: drop-shadow(0 0 8px rgba(0,240,255,0.4));
+}
+
+#skills .group span {
+  color: var(--text-dim) !important;
+  transition: color 0.3s ease;
+}
+
+#skills .group:hover span {
+  color: var(--neon-cyan) !important;
+}
+
+/* =====================================================
+   EXPERIENCE TIMELINE — Glowing Neon
+   ===================================================== */
+#experience {
+  background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep), var(--bg-panel)) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#experience h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* Glowing timeline line */
+.timeline-line {
+  background: linear-gradient(to bottom, var(--neon-cyan), var(--neon-violet), var(--neon-magenta)) !important;
+  box-shadow: 0 0 18px rgba(0,240,255,0.35);
+  animation: lineGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes lineGlow {
+  from { box-shadow: 0 0 12px rgba(0,240,255,0.25); }
+  to { box-shadow: 0 0 28px rgba(123,47,247,0.45); }
+}
+
+/* Timeline dots */
+.timeline-dot {
+  background: var(--grad-main) !important;
+  border: none !important;
+  box-shadow: 0 0 15px var(--neon-cyan);
+  animation: dotPulse 2.5s infinite;
+}
+
+#experience .bg-indigo-600.rounded-full {
+  background: var(--grad-main) !important;
+  border: 3px solid var(--bg-deep) !important;
+  box-shadow: 0 0 15px var(--neon-cyan);
+  animation: dotPulse 2.5s infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 8px var(--neon-cyan); transform: scale(1); }
+  50% { box-shadow: 0 0 22px var(--neon-violet); transform: scale(1.35); }
+}
+
+/* Experience cards */
+.experience-card,
+#experience .group.relative {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  padding: 1.25rem;
+  border-radius: 16px;
+  transition: all 0.4s ease;
+}
+
+.experience-card:hover,
+#experience .group.relative:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(0,240,255,0.25) !important;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.35), 0 0 1px var(--neon-cyan) !important;
+}
+
+#experience h3 {
+  color: var(--text-bright) !important;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#experience .text-gray-600 {
+  color: var(--neon-cyan) !important;
+  font-size: 0.85rem;
+}
+
+#experience .text-gray-500 {
+  color: var(--text-dim) !important;
+}
+
+/* =====================================================
+   TESTIMONIALS — Glass Cards
+   ===================================================== */
+#testimonials {
+  background: var(--bg-panel) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#testimonials h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+#testimonial-box {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+#testimonial-box .text-gray-700 {
+  color: var(--text-dim) !important;
+  position: relative;
+}
+
+/* Large decorative quote */
+#testimonial-box .text-gray-700::before {
+  content: '"';
+  font-family: 'Orbitron', monospace;
+  font-size: 4rem;
+  color: var(--neon-cyan);
+  opacity: 0.15;
+  position: absolute;
+  top: -1.2rem; left: -0.5rem;
+  line-height: 1;
+}
+
+#testimonial-box h4 {
+  color: var(--text-bright) !important;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#testimonial-box .text-gray-500 {
+  color: var(--neon-cyan) !important;
+}
+
+/* Testimonial arrow buttons */
+#testimonials button {
+  background: rgba(10,17,40,0.8) !important;
+  border: 1px solid var(--glass-border);
+  color: var(--neon-cyan) !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+#testimonials button:hover {
+  background: var(--neon-cyan) !important;
+  color: var(--bg-deep) !important;
+  box-shadow: var(--glow-cyan);
+  transform: scale(1.12);
+}
+
+/* =====================================================
+   ACHIEVEMENTS — Certificate Cards
+   ===================================================== */
+#achievements {
+  background: linear-gradient(180deg, var(--bg-deep), var(--bg-panel)) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#achievements h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+#achievements .bg-white {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1) !important;
+}
+
+#achievements .bg-white:hover {
+  border-color: rgba(0,240,255,0.2) !important;
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35), 0 0 1px var(--neon-cyan) !important;
+}
+
+#achievements h3 {
+  color: var(--text-bright) !important;
+}
+
+#achievements .text-gray-600,
+#achievements p {
+  color: var(--text-dim) !important;
+}
+
+#achievements .text-indigo-600,
+#achievements .text-purple-600 {
+  color: var(--neon-cyan) !important;
+}
+
+/* Certificate buttons */
+#achievements button,
+#achievements .border-indigo-600,
+#achievements .border-purple-600 {
+  border-color: var(--neon-cyan) !important;
+  color: var(--neon-cyan) !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+#achievements button:hover,
+#achievements .border-indigo-600:hover,
+#achievements .border-purple-600:hover {
+  background: var(--neon-cyan) !important;
+  color: var(--bg-deep) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+/* Image hover */
+#achievements .group-hover\:scale-105 {
+  transition: transform 0.5s ease !important;
+}
+
+/* Lightbox */
+#certificateLightbox {
+  background: rgba(0,0,0,0.95) !important;
+  backdrop-filter: blur(12px);
+}
+
+#certificateLightbox img {
+  border-radius: 12px;
+  box-shadow: 0 0 60px rgba(0,240,255,0.15);
+}
+
+#certificateLightbox button {
+  transition: all 0.3s ease;
+}
+
+#certificateLightbox button:hover {
+  color: var(--neon-cyan) !important;
+  transform: rotate(90deg);
+}
+
+/* =====================================================
+   CONTACT FORM — Neon Inputs
+   ===================================================== */
+#contact {
+  background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep)) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#contact h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+#contact .bg-white {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(15px);
+}
+
+#contact label {
+  color: var(--text-dim) !important;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+#contact input,
+#contact textarea {
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-bright) !important;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--neon-cyan) !important;
+  box-shadow: 0 0 0 3px rgba(0,240,255,0.08) !important;
+  outline: none;
+}
+
+#contact button[type="submit"] {
+  background: var(--grad-main) !important;
+  color: var(--bg-deep) !important;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 25px rgba(0,240,255,0.3);
+  transition: all 0.4s ease !important;
+}
+
+#contact button[type="submit"]:hover {
+  box-shadow: 0 8px 40px rgba(0,240,255,0.55) !important;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   FOOTER — Minimal Futuristic
+   ===================================================== */
+footer {
+  background: var(--bg-deep) !important;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-muted) !important;
+}
+
+/* =====================================================
+   WHATSAPP FLOAT — Pulse Glow
+   ===================================================== */
+a[href*="wa.me"] {
+  background: #25D366 !important;
+  box-shadow: 0 4px 25px rgba(37,211,102,0.4);
+  animation: waPulse 2.5s infinite;
+  transition: all 0.3s ease !important;
+  z-index: 50;
+}
+
+a[href*="wa.me"]:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 0 8px 35px rgba(37,211,102,0.65) !important;
+}
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 4px 35px rgba(37,211,102,0.7); }
+}
+
+/* =====================================================
+   SCROLL-REVEAL ANIMATION CLASSES (applied by JS)
+   ===================================================== */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for grids */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* =====================================================
+   FLOATING AI ICONS (injected by JS)
+   ===================================================== */
+.floating-icon {
+  position: fixed;
+  font-size: 1.2rem;
+  color: rgba(0,240,255,0.08);
+  pointer-events: none;
+  z-index: 0;
+  animation: iconDrift linear infinite;
+}
+
+@keyframes iconDrift {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =====================================================
+   SECTION DIVIDER GLOW LINE
+   ===================================================== */
+.section-glow-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-violet), transparent);
+  opacity: 0.3;
+  margin: 0;
+}
+
+/* =====================================================
+   PARTNER LOGOS SECTION BG
+   ===================================================== */
+div[data-aos="fade-up"]:has(.animate-scroll) {
+  background: var(--bg-deep);
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading near partners */
+div[data-aos="fade-up"] > h2:has(+ div .animate-scroll) {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* =====================================================
+   RIPPLE CLICK EFFECT (injected by JS)
+   ===================================================== */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0,240,255,0.25);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* =====================================================
+   PARTNER UNIVERSITIES SECTION — Simple Marquee
+   ===================================================== */
+#partners {
+  background: var(--bg-panel) !important;
+  position: relative;
+  z-index: 1;
+}
+
+#partners h2 {
+  font-family: 'Orbitron', monospace !important;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent !important;
+  letter-spacing: 3px;
+}
+
+/* Scroll track with fade edges */
+#partners .overflow-hidden {
+  position: relative;
+  padding: 1rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* Infinite scroll animation */
+@keyframes logoMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: logoMarquee 35s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Logo items */
+#partners .animate-scroll img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(30%) brightness(1);
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+#partners .animate-scroll img:hover {
+  filter: grayscale(0%) brightness(1.1);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Light mode */
+body.light-mode #partners {
+  background: #e6e9f2 !important;
+}
+
+body.light-mode #partners .animate-scroll img {
+  opacity: 0.9;
+  filter: grayscale(20%) brightness(1);
+}
+
+body.light-mode #partners .animate-scroll img:hover {
+  filter: grayscale(0%) brightness(1.05);
+  opacity: 1;
+}
+
+/* =====================================================
+   ANIMATED BACKGROUND BLOBS — Floating across entire page
+   ===================================================== */
+#bg-blob-1, #bg-blob-2, #bg-blob-3 {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(100px);
+}
+
+#bg-blob-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,240,255,0.08), transparent 70%);
+  top: -150px; left: -100px;
+  animation: blobMove1 22s ease-in-out infinite;
+}
+
+#bg-blob-2 {
+  width: 450px; height: 450px;
+  background: radial-gradient(circle, rgba(123,47,247,0.07), transparent 70%);
+  bottom: -100px; right: -100px;
+  animation: blobMove2 26s ease-in-out infinite;
+}
+
+#bg-blob-3 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(255,45,170,0.06), transparent 70%);
+  top: 40%; left: 50%;
+  animation: blobMove3 30s ease-in-out infinite;
+}
+
+@keyframes blobMove1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(120px, 80px) scale(1.1); }
+  50% { transform: translate(60px, 200px) scale(0.9); }
+  75% { transform: translate(-40px, 100px) scale(1.05); }
+}
+
+@keyframes blobMove2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-100px, -60px) scale(1.08); }
+  50% { transform: translate(-60px, -160px) scale(0.92); }
+  75% { transform: translate(50px, -80px) scale(1.04); }
+}
+
+@keyframes blobMove3 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  33% { transform: translate(-30%, -70%) scale(1.15); }
+  66% { transform: translate(-70%, -30%) scale(0.88); }
+}
+
+/* =====================================================
+   OVERRIDE TAILWIND LIGHT BG COLORS (Dark is default)
+   ===================================================== */
+.bg-gray-50 { background-color: var(--bg-deep) !important; }
+.bg-gray-100 { background-color: var(--bg-panel) !important; }
+.bg-white { background-color: var(--bg-card) !important; }
+.text-gray-800 { color: var(--text-bright) !important; }
+.text-gray-700 { color: var(--text-dim) !important; }
+.text-gray-600 { color: var(--text-dim) !important; }
+.text-gray-500 { color: var(--text-muted) !important; }
+.shadow-md { box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important; }
+.shadow-lg { box-shadow: 0 8px 30px rgba(0,0,0,0.35) !important; }
+
+/* Gradient backgrounds override */
+.bg-gradient-to-br.from-indigo-50.to-purple-50 {
+  background: linear-gradient(135deg, var(--bg-deep), var(--bg-panel)) !important;
+}
+
+.bg-gradient-to-b.from-gray-900 {
+  background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep), var(--bg-panel)) !important;
+}
+
+/* =====================================================
+   ☀️ LIGHT MODE — Full theme switch
+   ===================================================== */
+body.light-mode {
+  --bg-deep: #f0f2f8;
+  --bg-panel: #e6e9f2;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --glass: rgba(0, 0, 0, 0.02);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --text-bright: #1a1a2e;
+  --text-dim: #4a4a6a;
+  --text-muted: #8888a8;
+  --neon-cyan: #0096aa;
+  --neon-violet: #6320c0;
+  --neon-magenta: #c4208a;
+  --glow-cyan: 0 0 12px rgba(0,150,170,0.2), 0 0 30px rgba(0,150,170,0.05);
+  --glow-violet: 0 0 12px rgba(99,32,192,0.2), 0 0 30px rgba(99,32,192,0.05);
+
+  background-color: #f0f2f8 !important;
+  color: #1a1a2e !important;
+}
+
+/* Light mode scrollbar */
+body.light-mode::-webkit-scrollbar-track { background: #f0f2f8; }
+body.light-mode::-webkit-scrollbar-thumb {
+  background: linear-gradient(#0096aa, #6320c0);
+}
+
+body.light-mode ::selection {
+  background: #0096aa;
+  color: #fff;
+}
+
+/* Light mode: Particle canvas becomes subtle */
+body.light-mode #particle-canvas {
+  opacity: 0.35;
+}
+
+/* Light mode: Background blobs softer */
+body.light-mode #bg-blob-1 {
+  background: radial-gradient(circle, rgba(0,150,170,0.06), transparent 70%);
+}
+body.light-mode #bg-blob-2 {
+  background: radial-gradient(circle, rgba(99,32,192,0.05), transparent 70%);
+}
+body.light-mode #bg-blob-3 {
+  background: radial-gradient(circle, rgba(196,32,138,0.04), transparent 70%);
+}
+
+/* Light mode: Scroll progress */
+body.light-mode #scroll-progress {
+  box-shadow: 0 0 8px rgba(0,150,170,0.3), 0 0 15px rgba(99,32,192,0.15);
+}
+
+/* Light mode: Navbar */
+body.light-mode nav.fixed {
+  background: rgba(240,242,248,0.82) !important;
+  border-bottom-color: rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode nav.fixed.scrolled {
+  background: rgba(240,242,248,0.96) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 0 1px rgba(0,150,170,0.2) !important;
+}
+
+body.light-mode nav a[href^="#"] {
+  color: #4a4a6a !important;
+}
+body.light-mode nav a[href^="#"]:hover {
+  color: #0096aa !important;
+}
+
+body.light-mode nav .text-indigo-600 {
+  background: linear-gradient(135deg, #0096aa, #6320c0, #c4208a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode #mobile-menu {
+  background: rgba(240,242,248,0.97) !important;
+  border-bottom-color: rgba(0,0,0,0.06);
+}
+
+body.light-mode #mobile-menu a {
+  color: #4a4a6a !important;
+}
+body.light-mode #mobile-menu a:hover {
+  color: #0096aa !important;
+  background: rgba(0,150,170,0.05) !important;
+}
+
+/* Light mode: Hero overlay */
+body.light-mode section.min-h-screen > .absolute.inset-0 {
+  background: linear-gradient(
+    135deg,
+    rgba(240,242,248,0.92) 0%,
+    rgba(230,233,242,0.88) 40%,
+    rgba(240,242,248,0.95) 100%
+  ) !important;
+}
+
+/* Light mode: Hero grid */
+body.light-mode section.min-h-screen::before {
+  background-image:
+    linear-gradient(rgba(0,150,170,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,150,170,0.04) 1px, transparent 1px);
+}
+
+/* Light mode: Hero floating orb */
+body.light-mode section.min-h-screen::after {
+  background: radial-gradient(circle, rgba(0,150,170,0.08), transparent 70%);
+}
+
+/* Light mode: Hero text */
+body.light-mode section.min-h-screen h1 {
+  background: linear-gradient(135deg, #0096aa, #6320c0, #c4208a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode section.min-h-screen h2,
+body.light-mode section.min-h-screen .text-indigo-400 {
+  color: #0096aa !important;
+  text-shadow: none;
+}
+
+body.light-mode section.min-h-screen .relative.max-w-3xl {
+  color: #1a1a2e;
+}
+
+/* Light mode: Hero buttons */
+body.light-mode section.min-h-screen a[href="#contact"] {
+  background: linear-gradient(135deg, #0096aa, #6320c0, #c4208a) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 20px rgba(0,150,170,0.25);
+}
+
+body.light-mode section.min-h-screen a[href="#projects"] {
+  background: rgba(0,0,0,0.05) !important;
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #1a1a2e !important;
+}
+body.light-mode section.min-h-screen a[href="#projects"]:hover {
+  border-color: #0096aa;
+}
+
+body.light-mode section.min-h-screen a[href*="Resume"] {
+  background: linear-gradient(135deg, #00b876, #009660) !important;
+  color: #fff !important;
+}
+
+/* Light mode: Social buttons */
+body.light-mode .social-btn {
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.1);
+  color: #4a4a6a;
+}
+
+/* Light mode: Profile image */
+body.light-mode section.min-h-screen img[alt="Manav"] {
+  border-color: rgba(0,150,170,0.25) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Light mode: Section titles */
+body.light-mode #about h2,
+body.light-mode #projects h2,
+body.light-mode #skills h2,
+body.light-mode #experience h2,
+body.light-mode #testimonials h2,
+body.light-mode #achievements h2,
+body.light-mode #eduhunt h2,
+body.light-mode #contact h2 {
+  background: linear-gradient(135deg, #0096aa, #6320c0, #c4208a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Light mode: Cards */
+body.light-mode .bg-white,
+body.light-mode #projects .bg-white,
+body.light-mode #skills > div > div > div.bg-white,
+body.light-mode #achievements .bg-white,
+body.light-mode #contact .bg-white {
+  background: rgba(255,255,255,0.85) !important;
+  border-color: rgba(0,0,0,0.06) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode #projects .bg-white:hover,
+body.light-mode #skills > div > div > div.bg-white:hover,
+body.light-mode #achievements .bg-white:hover {
+  border-color: rgba(0,150,170,0.2) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1), 0 0 1px rgba(0,150,170,0.3) !important;
+}
+
+/* Light mode: Sections backgrounds */
+body.light-mode #about { background: #f0f2f8 !important; }
+body.light-mode #projects { background: #e6e9f2 !important; }
+body.light-mode #skills { background: #f0f2f8 !important; }
+body.light-mode #eduhunt { background: linear-gradient(180deg, #f0f2f8, #e6e9f2, #f0f2f8) !important; }
+body.light-mode #experience { background: linear-gradient(180deg, #e6e9f2, #f0f2f8, #e6e9f2) !important; }
+body.light-mode #testimonials { background: #e6e9f2 !important; }
+body.light-mode #achievements { background: linear-gradient(180deg, #f0f2f8, #e6e9f2) !important; }
+body.light-mode #contact { background: linear-gradient(180deg, #e6e9f2, #f0f2f8) !important; }
+
+/* Light mode: Text overrides */
+body.light-mode .text-gray-800 { color: #1a1a2e !important; }
+body.light-mode .text-gray-700 { color: #4a4a6a !important; }
+body.light-mode .text-gray-600 { color: #4a4a6a !important; }
+body.light-mode .text-gray-500 { color: #8888a8 !important; }
+body.light-mode .bg-gray-50 { background-color: #f0f2f8 !important; }
+body.light-mode .bg-gray-100 { background-color: #e6e9f2 !important; }
+
+body.light-mode .shadow-md { box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important; }
+body.light-mode .shadow-lg { box-shadow: 0 8px 25px rgba(0,0,0,0.08) !important; }
+
+/* Light mode: About gradient banner */
+body.light-mode #about .bg-gradient-to-r {
+  background: linear-gradient(135deg, #0096aa, #6320c0) !important;
+  border-color: transparent !important;
+}
+
+body.light-mode #about .bg-gradient-to-r li {
+  color: #fff !important;
+}
+
+/* Light mode: Tech tags */
+body.light-mode #projects .bg-indigo-100 {
+  background: rgba(0,150,170,0.08) !important;
+  border-color: rgba(0,150,170,0.15);
+  color: #0096aa !important;
+}
+
+/* Light mode: Skills */
+body.light-mode #skills h3 {
+  color: #0096aa !important;
+}
+
+body.light-mode #skills .group span {
+  color: #4a4a6a !important;
+}
+body.light-mode #skills .group:hover span {
+  color: #0096aa !important;
+}
+
+/* Light mode: Experience timeline */
+body.light-mode .timeline-line {
+  background: linear-gradient(to bottom, #0096aa, #6320c0, #c4208a) !important;
+  box-shadow: 0 0 10px rgba(0,150,170,0.2);
+}
+
+body.light-mode .timeline-dot,
+body.light-mode #experience .bg-indigo-600.rounded-full {
+  background: linear-gradient(135deg, #0096aa, #6320c0) !important;
+  box-shadow: 0 0 10px rgba(0,150,170,0.3);
+}
+
+body.light-mode .experience-card,
+body.light-mode #experience .group.relative {
+  background: rgba(255,255,255,0.8) !important;
+  border-color: rgba(0,0,0,0.06);
+}
+
+body.light-mode .experience-card:hover,
+body.light-mode #experience .group.relative:hover {
+  border-color: rgba(0,150,170,0.2) !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08), 0 0 1px rgba(0,150,170,0.3) !important;
+}
+
+body.light-mode #experience h3 { color: #1a1a2e !important; }
+body.light-mode #experience .text-gray-600 { color: #0096aa !important; }
+body.light-mode #experience .text-gray-500 { color: #4a4a6a !important; }
+
+/* Light mode: Testimonials */
+body.light-mode #testimonial-box {
+  background: rgba(255,255,255,0.85) !important;
+  border-color: rgba(0,0,0,0.06);
+}
+
+body.light-mode #testimonial-box .text-gray-700 { color: #4a4a6a !important; }
+body.light-mode #testimonial-box h4 { color: #1a1a2e !important; }
+body.light-mode #testimonial-box .text-gray-500 { color: #0096aa !important; }
+
+body.light-mode #testimonials button {
+  background: rgba(255,255,255,0.8) !important;
+  border-color: rgba(0,0,0,0.08);
+  color: #0096aa !important;
+}
+body.light-mode #testimonials button:hover {
+  background: #0096aa !important;
+  color: #fff !important;
+}
+
+/* Light mode: Achievements */
+body.light-mode #achievements h3 { color: #1a1a2e !important; }
+body.light-mode #achievements .text-indigo-600,
+body.light-mode #achievements .text-purple-600 {
+  color: #0096aa !important;
+}
+
+body.light-mode #achievements button,
+body.light-mode #achievements .border-indigo-600,
+body.light-mode #achievements .border-purple-600 {
+  border-color: #0096aa !important;
+  color: #0096aa !important;
+}
+body.light-mode #achievements button:hover,
+body.light-mode #achievements .border-indigo-600:hover,
+body.light-mode #achievements .border-purple-600:hover {
+  background: #0096aa !important;
+  color: #fff !important;
+}
+
+/* Light mode: EduHunt */
+body.light-mode #eduhunt .italic { color: #0096aa !important; }
+body.light-mode #eduhunt .text-lg.font-semibold { color: #1a1a2e !important; }
+body.light-mode #eduhunt .bg-white.rounded.shadow-md {
+  background: rgba(255,255,255,0.9) !important;
+  border-color: rgba(0,0,0,0.06);
+}
+
+/* Light mode: Contact */
+body.light-mode #contact label { color: #4a4a6a !important; }
+body.light-mode #contact input,
+body.light-mode #contact textarea {
+  background: rgba(255,255,255,0.9) !important;
+  border-color: rgba(0,0,0,0.1) !important;
+  color: #1a1a2e !important;
+}
+body.light-mode #contact input:focus,
+body.light-mode #contact textarea:focus {
+  border-color: #0096aa !important;
+  box-shadow: 0 0 0 3px rgba(0,150,170,0.1) !important;
+}
+
+body.light-mode #contact button[type="submit"] {
+  background: linear-gradient(135deg, #0096aa, #6320c0, #c4208a) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 20px rgba(0,150,170,0.2);
+}
+
+/* Light mode: Footer */
+body.light-mode footer {
+  background: #f0f2f8 !important;
+  border-top-color: rgba(0,0,0,0.06) !important;
+  color: #8888a8 !important;
+}
+
+/* Light mode: Partner logos */
+body.light-mode .animate-scroll img {
+  filter: grayscale(50%) brightness(0.9) !important;
+  opacity: 0.7;
+}
+body.light-mode .animate-scroll img:hover {
+  filter: grayscale(0%) brightness(1) !important;
+  opacity: 1;
+}
+
+/* Light mode: WhatsApp float */
+body.light-mode a[href*="wa.me"] {
+  box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+}
+
+/* Light mode: Section top border */
+body.light-mode section::before {
+  background: linear-gradient(90deg, transparent, rgba(0,150,170,0.1), transparent);
+}
+
+/* Light mode: Gradient backgrounds */
+body.light-mode .bg-gradient-to-br.from-indigo-50.to-purple-50 {
+  background: linear-gradient(135deg, #f0f2f8, #e6e9f2) !important;
+}
+
+body.light-mode .bg-gradient-to-b.from-gray-900 {
+  background: linear-gradient(180deg, #e6e9f2, #f0f2f8, #e6e9f2) !important;
+}
+
+/* Light mode: Ripple effect */
+body.light-mode .ripple-effect {
+  background: rgba(0,150,170,0.15);
+}
+
+/* Light mode: Floating icons */
+body.light-mode .floating-icon {
+  color: rgba(0,150,170,0.06);
+}
+
+/* Light mode: Theme toggle button */
+body.light-mode nav button#theme-toggle {
+  filter: drop-shadow(0 0 4px rgba(0,150,170,0.3));
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE ADJUSTMENTS
+   ===================================================== */
+@media (max-width: 640px) {
+  section.min-h-screen h1 {
+    font-size: 2rem !important;
+  }
+
+  .social-btn {
+    width: 48px; height: 48px;
+  }
+
+  section.min-h-screen::after {
+    width: 250px; height: 250px;
+    top: -60px; right: -60px;
+  }
+
+  #bg-blob-1, #bg-blob-2, #bg-blob-3 {
+    width: 250px; height: 250px;
+  }
 }

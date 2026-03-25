@@ -7,10 +7,11 @@
     <title>Manav Jitubhai Luhar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>\
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/6b60d6f67d.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -39,7 +40,7 @@
         <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
         <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
         <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-        <button onclick="toggleDarkMode()" 
+        <button id="theme-toggle" onclick="toggleDarkMode()" 
         class="ml-4 text-xl hover:scale-110 transition">
           🌙
         </button>
@@ -280,7 +281,7 @@
       
       <!-- Left: Logo & Info -->
       <div class="text-center md:text-left">
-        <img src="eduhunt-logo.jpg" alt="Eduhunt Logo" class="w-40 mx-auto md:mx-0 mb-6">
+        <img src="eduhunt-logo.jpg" alt="Eduhunt Logo" class="w-64 md:w-80 lg:w-96 mx-auto md:mx-0 mb-8 drop-shadow-lg rounded-xl">
         <p class="text-lg font-semibold">📞 +91 97235 44393</p>
         <p class="text-sm text-gray-600">GST.NO: 24ABMPL7430Q1Z3</p>
         <p class="mt-4 text-gray-700 leading-relaxed">
@@ -387,95 +388,8 @@
 </section>
 
 
-<!-- Partner Universities Section -->
-<div class="mt-16" data-aos="fade-up">
-  <h2 class="text-3xl font-bold mb-12 text-center">Our Partner Universities</h2>
-  
-  <div class="overflow-hidden relative">
-    <div class="flex gap-12 animate-scroll">
-      
-      <!-- USA -->
-      <img src="logos\University of California.jpg" alt="California" class="h-16 w-auto object-contain">
-      <img src="logos\Massachusetts Institute of Technology.webp" alt="Massachusetts" class="h-16 w-auto object-contain">
-      <img src="logos\Georgia Institute of Technology.webp" alt="Georgia" class="h-16 w-auto object-contain">
-      <img src="logos\University-of-Washington.webp" alt="Washington" class="h-16 w-auto object-contain">
-      <img src="logos\Columbia University.webp" alt="Columbia" class="h-16 w-auto object-contain">
 
-      <!-- Canada -->
-      <img src="logos\McGill University.jpg" alt="McGill" class="h-16 w-auto object-contain">
-      <img src="logos\The University of British Columbia.webp" alt="British Columbia" class="h-16 w-auto object-contain">
-      <img src="logos\University of Toronto.webp" alt="Toronto" class="h-16 w-auto object-contain">
-      <img src="logos\University_of_Waterloo.png" alt="Waterloo" class="h-16 w-auto object-contain">
 
-      <!-- UK -->
-      <img src="logos\Liverpool John Moores University, Liverpool.webp" alt="Liverpool" class="h-16 w-auto object-contain">
-      <img src="logos\The University of Sheffield International College.webp" alt="Sheffield" class="h-16 w-auto object-contain">
-      <img src="logos\University Academy 92.webp" alt="Academy 92" class="h-16 w-auto object-contain">
-      <img src="logos\University of Leeds.webp" alt="Leeds" class="h-16 w-auto object-contain">
-
-      <!-- Germany -->
-      <img src="logos\GISMA Business School Hochschule.png" alt="GISMA" class="h-16 w-auto object-contain">
-      <img src="logos\Technical University of Munich.webp" alt="LMU Munich" class="h-16 w-auto object-contain">
-      <img src="logos\Heidelberg University - Germany.webp" alt="Heidelberg" class="h-16 w-auto object-contain">
-      <img src="logos\Technical University of Munich.webp" alt="TUM" class="h-16 w-auto object-contain">
-
-      <!-- Australia -->
-      <img src="logos\University of Queensland.png" alt="Queensland" class="h-16 w-auto object-contain">
-      <img src="logos\University of Sydney.png" alt="Sydney" class="h-16 w-auto object-contain">
-      <img src="logos\Monash University.jpg" alt="Monash" class="h-16 w-auto object-contain">
-      <img src="logos\The University of Melbourne.webp" alt="Melbourne" class="h-16 w-auto object-contain">
-
-      <!-- USA -->
-      <img src="logos\University of California.jpg" alt="California" class="h-16 w-auto object-contain">
-      <img src="logos\Massachusetts Institute of Technology.webp" alt="Massachusetts" class="h-16 w-auto object-contain">
-      <img src="logos\Georgia Institute of Technology.webp" alt="Georgia" class="h-16 w-auto object-contain">
-      <img src="logos\University-of-Washington.webp" alt="Washington" class="h-16 w-auto object-contain">
-      <img src="logos\Columbia University.webp" alt="Columbia" class="h-16 w-auto object-contain">
-
-      <!-- Canada -->
-      <img src="logos\McGill University.jpg" alt="McGill" class="h-16 w-auto object-contain">
-      <img src="logos\The University of British Columbia.webp" alt="British Columbia" class="h-16 w-auto object-contain">
-      <img src="logos\University of Toronto.webp" alt="Toronto" class="h-16 w-auto object-contain">
-      <img src="logos\University_of_Waterloo.png" alt="Waterloo" class="h-16 w-auto object-contain">
-
-      <!-- UK -->
-      <img src="logos\Liverpool John Moores University, Liverpool.webp" alt="Liverpool" class="h-16 w-auto object-contain">
-      <img src="logos\The University of Sheffield International College.webp" alt="Sheffield" class="h-16 w-auto object-contain">
-      <img src="logos\University Academy 92.webp" alt="Academy 92" class="h-16 w-auto object-contain">
-      <img src="logos\University of Leeds.webp" alt="Leeds" class="h-16 w-auto object-contain">
-
-      <!-- Germany -->
-      <img src="logos\GISMA Business School Hochschule.png" alt="GISMA" class="h-16 w-auto object-contain">
-      <img src="logos\Technical University of Munich.webp" alt="LMU Munich" class="h-16 w-auto object-contain">
-      <img src="logos\Heidelberg University - Germany.webp" alt="Heidelberg" class="h-16 w-auto object-contain">
-      <img src="logos\Technical University of Munich.webp" alt="TUM" class="h-16 w-auto object-contain">
-
-      <!-- Australia -->
-      <img src="logos\University of Queensland.png" alt="Queensland" class="h-16 w-auto object-contain">
-      <img src="logos\University of Sydney.png" alt="Sydney" class="h-16 w-auto object-contain">
-      <img src="logos\Monash University.jpg" alt="Monash" class="h-16 w-auto object-contain">
-      <img src="logos\The University of Melbourne.webp" alt="Melbourne" class="h-16 w-auto object-contain">
-
-    </div>
-  </div>
-</div>
-
-<!-- CSS -->
-<style>
-  @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-scroll {
-  animation: scroll 35s linear infinite;
-  width: max-content;
-}
-
-.animate-scroll:hover {
-  animation-play-state: paused;
-}
-</style>
 
 
     <!-- Skills Section -->
@@ -570,8 +484,8 @@
 </section>
 
 <!-- Experience / Timeline Section -->
-<section id="experience" class="py-20 px-6 bg-gray-100">
-  <div class="max-w-6xl mx-auto" data-aos="fade-up">
+<section id="experience" class="relative py-24 px-6 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white overflow-hidden">  
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
 
     <!-- Heading -->
     <h2 class="text-3xl font-bold mb-12 text-center">Experience & Education</h2>
@@ -579,11 +493,11 @@
     <!-- Timeline Container -->
     <div class="relative">
       <!-- Vertical line -->
-      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-indigo-600 h-full"></div>
+      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line"></div>
 
       <!-- Item 1 -->
       <div class="mb-12 flex justify-start">
-        <div class="w-1/2 pr-8 text-right group relative">
+        <div class="w-1/2 pr-8 text-right group relative experience-card">
           <h3 class="text-xl font-semibold">High School – Science Stream</h3>
           <p class="text-gray-600">AB School – 2021</p>
           <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
@@ -591,7 +505,8 @@
           </div>
         </div>
         <div class="w-1/2 relative">
-          <div class="absolute left-0 top-2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-white transform -translate-x-1/2"></div>
+          <div class="absolute left-0 top-2 w-6 h-6 timeline-dot transform -translate-x-1/2"></div>
+          <div class="absolute right-0 top-2 w-6 h-6 timeline-dot transform translate-x-1/2"></div>
         </div>
       </div>
 
