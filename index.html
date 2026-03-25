@@ -70,11 +70,9 @@
 
 
     <!-- Hero Section -->
-<section class="min-h-screen bg-cover bg-center flex items-center justify-center px-6 relative"
-    style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1470&q=80');">
+<section class="min-h-screen flex items-center justify-center px-6 relative z-10">
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/70"></div>
+    <!-- Overlay removed since now we use the particle background -->
 
     <div class="relative max-w-3xl w-full text-center text-white py-24 px-8 rounded-xl backdrop-blur-md"
          data-aos="fade-up">
@@ -151,13 +149,13 @@
             <p class="text-lg leading-relaxed mb-8">I am a passionate technologist driven to make a difference using
                 AI, software engineering, and education consulting. I guide students abroad while building innovative
                 tech solutions.</p>
-            <div class="bg-gradient-to-r from-indigo-600 to-cyan-500 text-white rounded-lg p-8">
+            <div class="glass-pallet rounded-lg p-8">
                 <ul class="flex flex-col md:flex-row items-center justify-center gap-8">
-                    <li class="flex items-center text-xl">
+                    <li class="flex items-center text-xl font-medium tracking-wide">
                         <span class="text-2xl mr-2">🌍</span>
                         Study Abroad Expert
                     </li>
-                    <li class="flex items-center text-xl">
+                    <li class="flex items-center text-xl font-medium tracking-wide">
                         <span class="text-2xl mr-2">🚀</span>
                         AI & ML Enthusiast
                     </li>
@@ -168,7 +166,7 @@
 
     <!-- Projects Section -->
 <!-- Replace the existing Projects section with this -->
-<section id="projects" class="py-20 px-6 bg-gray-100">
+<section id="projects" class="py-20 px-6 relative z-10">
     <div class="max-w-6xl mx-auto" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
         
@@ -267,7 +265,7 @@
 </section>
 
 <!-- EduHunt Study Overseas Section -->
-<section id="eduhunt" class="py-20 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+<section id="eduhunt" class="py-20 px-6 relative z-10">
   <div class="max-w-6xl mx-auto" data-aos="fade-up">
     
     <!-- Header -->
@@ -484,117 +482,134 @@
 </section>
 
 <!-- Experience / Timeline Section -->
-<section id="experience" class="relative py-24 px-6 bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white overflow-hidden">  
-    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+<section id="experience" class="relative py-24 px-6 overflow-hidden z-10">  
+    <div class="max-w-5xl mx-auto" data-aos="fade-up">
 
-    <!-- Heading -->
-    <h2 class="text-3xl font-bold mb-12 text-center">Experience & Education</h2>
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold mb-16 text-center text-white">Experience & Education</h2>
 
-    <!-- Timeline Container -->
-    <div class="relative">
-      <!-- Vertical line -->
-      <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line"></div>
+        <!-- Timeline Container -->
+        <div class="relative wrap overflow-hidden p-10 h-full">
+            
+            <!-- Center Vertical Line -->
+            <div class="absolute border-opacity-20 border-white h-full border-l-2 left-1/2 transform -translate-x-1/2"></div>
+            
+            <!-- Item 1 (Left) -->
+            <div class="mb-12 flex justify-between items-center w-full group">
+                <div class="w-5/12">
+                    <div class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1">High School – Science Stream</h3>
+                        <p class="text-indigo-400 font-semibold mb-3">AB School – 2021</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Completed with distinction in Physics, Chemistry, and Mathematics.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-2/12 flex justify-center z-10 relative">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
+                </div>
+                <div class="w-5/12"></div>
+            </div>
 
-      <!-- Item 1 -->
-      <div class="mb-12 flex justify-start">
-        <div class="w-1/2 pr-8 text-right group relative experience-card">
-          <h3 class="text-xl font-semibold">High School – Science Stream</h3>
-          <p class="text-gray-600">AB School – 2021</p>
-          <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
-            Completed with distinction in Physics, Chemistry, and Mathematics.
-          </div>
-        </div>
-        <div class="w-1/2 relative">
-          <div class="absolute left-0 top-2 w-6 h-6 timeline-dot transform -translate-x-1/2"></div>
-          <div class="absolute right-0 top-2 w-6 h-6 timeline-dot transform translate-x-1/2"></div>
-        </div>
-      </div>
+            <!-- Item 2 (Right) -->
+            <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
+                <div class="w-5/12">
+                    <div class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1">Bachelor’s in Computer Engineering</h3>
+                        <p class="text-indigo-400 font-semibold mb-3">Charusat University – 2021–2025</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Specialized in AI, Machine Learning, and Full Stack Development.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-2/12 flex justify-center z-10 relative">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
+                </div>
+                <div class="w-5/12"></div>
+            </div>
 
-      <!-- Item 2 -->
-      <div class="mb-12 flex justify-end">
-        <div class="w-1/2 relative">
-          <div class="absolute right-0 top-2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-white transform translate-x-1/2"></div>
-        </div>
-        <div class="w-1/2 pl-8 text-left group relative">
-          <h3 class="text-xl font-semibold">Bachelor’s in Computer Engineering</h3>
-          <p class="text-gray-600">Charusat University – 2021–2025</p>
-          <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
-            Specialized in AI, Machine Learning, and Full Stack Development.
-          </div>
-        </div>
-      </div>
+            <!-- Item 3 (Left) -->
+            <div class="mb-12 flex justify-between items-center w-full group">
+                <div class="w-5/12">
+                    <div class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1">Node.JS Developer – Intern</h3>
+                        <p class="text-indigo-400 font-semibold mb-3">Upstair Technologies LLP (Surat) – 05/2023 – 06/2023</p>
+                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                            <li>Angular/Node.js based web page</li>
+                            <li>Different types of operations on web page</li>
+                            <li>CRUD application</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-2/12 flex justify-center z-10 relative">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
+                </div>
+                <div class="w-5/12"></div>
+            </div>
 
-      <!-- Item 3 -->
-      <div class="mb-12 flex justify-start">
-        <div class="w-1/2 pr-8 text-right group relative">
-          <h3 class="text-xl font-semibold">Node.JS Developer – Intern</h3>
-          <p class="text-gray-600">Upstair Technologies LLP (Surat) – 05/2023 – 06/2023</p>
-          <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
-            • Angular/Node.js based web page<br>
-            • Different types of operations on web page<br>
-            • CRUD application
-          </div>
-        </div>
-        <div class="w-1/2 relative">
-          <div class="absolute left-0 top-2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-white transform -translate-x-1/2"></div>
-        </div>
-      </div>
+            <!-- Item 4 (Right) -->
+            <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
+                <div class="w-5/12">
+                    <div class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1">Computer Vision Engineer – Intern</h3>
+                        <p class="text-indigo-400 font-semibold mb-3">Techno Smart Diamond Solution (Surat) – 05/2024 – 06/2024</p>
+                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                            <li>Diamond Part Recognition</li>
+                            <li>Dataset creation</li>
+                            <li>Model Training and validation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-2/12 flex justify-center z-10 relative">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
+                </div>
+                <div class="w-5/12"></div>
+            </div>
 
-      <!-- Item 4 -->
-      <div class="mb-12 flex justify-end">
-        <div class="w-1/2 relative">
-          <div class="absolute right-0 top-2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-white transform translate-x-1/2"></div>
-        </div>
-        <div class="w-1/2 pl-8 text-left group relative">
-          <h3 class="text-xl font-semibold">Computer Vision Engineer – Intern</h3>
-          <p class="text-gray-600">Techno Smart Diamond Solution (Surat) – 05/2024 – 06/2024</p>
-          <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
-            • Diamond Part Recognition<br>
-            • Dataset creation<br>
-            • Model Training and validation
-          </div>
-        </div>
-      </div>
+            <!-- Item 5 (Left) -->
+            <div class="mb-12 flex justify-between items-center w-full group">
+                <div class="w-5/12">
+                    <div class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1">Data Analyst – Intern</h3>
+                        <p class="text-indigo-400 font-semibold mb-3">Techno Smart Diamond Solution (Surat) – 10/2024 – 07/2025</p>
+                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                            <li>Building multiple disease prediction system</li>
+                            <li>Heart, diabetes and Parkinson’s models creation</li>
+                            <li>Dataset Understanding & SVM usage</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-2/12 flex justify-center z-10 relative">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
+                </div>
+                <div class="w-5/12"></div>
+            </div>
 
-      <!-- Item 5 -->
-      <div class="mb-12 flex justify-start">
-        <div class="w-1/2 pr-8 text-right group relative">
-          <h3 class="text-xl font-semibold">Data Analyst – Intern</h3>
-          <p class="text-gray-600">Techno Smart Diamond Solution (Surat) – 10/01/2025 – 10/07/2025</p>
-          <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
-            • Building multiple disease prediction system<br>
-            • Heart, diabetes and Parkinson’s models creation<br>
-            • Dataset Understanding<br>
-            • SVM usage
-          </div>
-        </div>
-        <div class="w-1/2 relative">
-          <div class="absolute left-0 top-2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-white transform -translate-x-1/2"></div>
-        </div>
-      </div>
+            <!-- Item 6 (Right) -->
+            <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
+                <div class="w-5/12">
+                    <div class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1">Projects Timeline</h3>
+                        <p class="text-indigo-400 font-semibold mb-3">2021–2025</p>
+                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                            <li>Deep Fusion (Disease Prediction System)</li>
+                            <li>Diamond Recognition System</li>
+                            <li>Kids Jungle Adventure Game</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-2/12 flex justify-center z-10 relative">
+                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
+                </div>
+                <div class="w-5/12"></div>
+            </div>
 
-      <!-- Item 6 -->
-      <div class="mb-12 flex justify-end">
-        <div class="w-1/2 relative">
-          <div class="absolute right-0 top-2 w-6 h-6 bg-indigo-600 rounded-full border-4 border-white transform translate-x-1/2"></div>
         </div>
-        <div class="w-1/2 pl-8 text-left group relative">
-          <h3 class="text-xl font-semibold">Projects</h3>
-          <p class="text-gray-600">2021–2025</p>
-          <div class="mt-2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
-            – Deep Fusion (Disease Prediction System)<br>
-            – Diamond Recognition System<br>
-            – Kids Jungle Adventure Game
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="py-20 px-6 bg-white">
+<section id="testimonials" class="py-20 px-6 relative z-10">
   <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
 
     <!-- Heading -->
@@ -620,15 +635,15 @@
 
 <!-- Achievements Section -->
 
-<section id="achievements" class="py-20 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+<section id="achievements" class="py-20 px-6 relative z-10">
     <div class="max-w-6xl mx-auto" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-12 text-center">Achievements & Certifications</h2>
         
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Research Paper Certificate -->
             <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <img src="research-logo.jpg" alt="Research Logo" class="w-10 h-10 object-contain">
+                <div class="flex items-center justify-center w-28 h-28 bg-white rounded-full shadow-[0_4px_20px_rgba(0,240,255,0.15)] mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <img src="research-logo.jpg" alt="Research Logo" class="w-20 h-20 object-contain drop-shadow-md">
                 </div>
 
                 <h3 class="text-xl font-bold text-center mb-4">Research Publication</h3>
@@ -658,8 +673,8 @@
 
             <!-- Study Abroad Consultant Certificate -->
             <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <img src="certificate-logo.jpg" alt="Certificate Logo" class="w-10 h-10 object-contain">
+                <div class="flex items-center justify-center w-28 h-28 bg-white rounded-full shadow-[0_4px_20px_rgba(0,240,255,0.15)] mb-6 mx-auto group-hover:scale-110 transition-transform">
+                    <img src="certificate-logo.jpg" alt="Certificate Logo" class="w-20 h-20 object-contain drop-shadow-md">
                 </div>
 
                 <h3 class="text-xl font-bold text-center mb-4">Study Abroad Consultant Certification</h3>
@@ -698,7 +713,7 @@
 
     <!-- Contact Section -->
     <!-- Contact Section -->
-<section id="contact" class="py-20 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
+<section id="contact" class="py-20 px-6 relative z-10">
   <div class="max-w-4xl mx-auto" data-aos="fade-up">
     <!-- Heading -->
     <h2 class="text-3xl font-bold mb-12 text-center">Contact Me</h2>

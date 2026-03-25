@@ -291,9 +291,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // =====================================================
-  // 8. THEME TOGGLE — Dark default, Light mode switch
+  // 8. THEME TOGGLE — Auto-detect System Preference
   // =====================================================
-  let isLightMode = localStorage.getItem("theme") === "light";
+  let isLightMode = false;
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    // 1. Use saved user preference
+    isLightMode = savedTheme === "light";
+  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+    // 2. Or use system preference (if no user override)
+    isLightMode = true;
+  }
+
+  // 3. Listen for system theme changes in real time (only applies if manual override not set)
+  window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      isLightMode = e.matches;
+      applyTheme();
+    }
+  });
   const themeBtn = document.getElementById("theme-toggle");
 
   function applyTheme() {

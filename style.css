@@ -57,6 +57,99 @@ body {
 }
 
 /* =====================================================
+   TRANSLUCENT GLASS UI PALLETS
+   Provides structured cards while showing animation!
+   ===================================================== */
+#projects .bg-white, 
+#skills .bg-white, 
+#eduhunt .bg-white, 
+#testimonials #testimonial-box, 
+#achievements .bg-white, 
+#contact .bg-white,
+.glass-pallet {
+  background: var(--glass) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover effect */
+#projects .bg-white:hover, 
+#skills .bg-white:hover, 
+#achievements .bg-white:hover,
+.glass-pallet:hover {
+  border-color: rgba(0,240,255,0.3) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0,240,255,0.1) !important;
+}
+
+/* Text overrides for readability on transparent glass */
+#projects .bg-white p, #skills .bg-white p, #eduhunt .bg-white p, 
+#testimonials #testimonial-box p, #achievements .bg-white p, #contact .bg-white p,
+#projects .text-gray-600, #skills .text-gray-600, #achievements .text-gray-600,
+#eduhunt .text-gray-600, #eduhunt .text-sm {
+  color: var(--text-dim) !important;
+}
+#projects .bg-white h3, #skills .bg-white h3, #eduhunt .bg-white h3, 
+#achievements .bg-white h3, #contact .bg-white h3, #eduhunt .text-lg {
+  color: var(--text-bright) !important;
+}
+#contact label {
+  color: var(--text-bright) !important;
+}
+#contact input, #contact textarea {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  color: #fff !important;
+  backdrop-filter: blur(4px);
+}
+#contact input:focus, #contact textarea:focus {
+  border-color: var(--neon-cyan) !important;
+  box-shadow: 0 0 10px rgba(0,240,255,0.2) !important;
+  outline: none;
+}
+
+/* Light mode structured glass pallets */
+body.light-mode #projects .bg-white, 
+body.light-mode #skills .bg-white, 
+body.light-mode #eduhunt .bg-white, 
+body.light-mode #testimonials #testimonial-box, 
+body.light-mode #achievements .bg-white, 
+body.light-mode #contact .bg-white,
+body.light-mode .glass-pallet {
+  background: rgba(255, 255, 255, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08) !important;
+}
+body.light-mode #projects .bg-white:hover, 
+body.light-mode #skills .bg-white:hover, 
+body.light-mode #achievements .bg-white:hover,
+body.light-mode .glass-pallet:hover {
+  border-color: rgba(0,150,170,0.4) !important;
+  box-shadow: 0 12px 45px rgba(31, 38, 135, 0.12), 0 0 15px rgba(0,150,170,0.1) !important;
+}
+body.light-mode #projects .bg-white p, body.light-mode #skills .bg-white p, 
+body.light-mode #eduhunt .bg-white p, body.light-mode #testimonials #testimonial-box p, 
+body.light-mode #achievements .bg-white p, body.light-mode #contact .bg-white p,
+body.light-mode #eduhunt .text-gray-600, body.light-mode #eduhunt .text-sm {
+  color: #4a4a6a !important;
+}
+body.light-mode #contact label,
+body.light-mode #projects .bg-white h3, body.light-mode #skills .bg-white h3, 
+body.light-mode #eduhunt .bg-white h3, body.light-mode #achievements .bg-white h3, 
+body.light-mode #eduhunt .text-lg {
+  color: #1a1a2e !important;
+}
+body.light-mode #contact input, body.light-mode #contact textarea {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  color: #1a1a2e !important;
+}
+
+/* =====================================================
    PARTICLE / NETWORK CANVAS (injected via JS)
    ===================================================== */
 #particle-canvas {
@@ -506,7 +599,6 @@ section.min-h-screen a[href*="Resume"]:hover {
    EDUHUNT SECTION
    ===================================================== */
 #eduhunt {
-  background: linear-gradient(180deg, var(--bg-deep), var(--bg-panel), var(--bg-deep)) !important;
   position: relative;
   z-index: 1;
 }
@@ -586,7 +678,6 @@ section.min-h-screen a[href*="Resume"]:hover {
    SKILLS SECTION — Neon Hover Cards
    ===================================================== */
 #skills {
-  background: var(--bg-deep) !important;
   position: relative;
   z-index: 1;
 }
@@ -657,7 +748,6 @@ section.min-h-screen a[href*="Resume"]:hover {
    EXPERIENCE TIMELINE — Glowing Neon
    ===================================================== */
 #experience {
-  background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep), var(--bg-panel)) !important;
   position: relative;
   z-index: 1;
 }
@@ -739,7 +829,6 @@ section.min-h-screen a[href*="Resume"]:hover {
    TESTIMONIALS — Glass Cards
    ===================================================== */
 #testimonials {
-  background: var(--bg-panel) !important;
   position: relative;
   z-index: 1;
 }
@@ -807,7 +896,6 @@ section.min-h-screen a[href*="Resume"]:hover {
    ACHIEVEMENTS — Certificate Cards
    ===================================================== */
 #achievements {
-  background: linear-gradient(180deg, var(--bg-deep), var(--bg-panel)) !important;
   position: relative;
   z-index: 1;
 }
@@ -1292,18 +1380,18 @@ body.light-mode ::selection {
 
 /* Light mode: Particle canvas becomes subtle */
 body.light-mode #particle-canvas {
-  opacity: 0.35;
+  opacity: 0.85; /* Increased opacity from 0.35 so it remains highly visible on light bg */
 }
 
 /* Light mode: Background blobs softer */
 body.light-mode #bg-blob-1 {
-  background: radial-gradient(circle, rgba(0,150,170,0.06), transparent 70%);
+  background: radial-gradient(circle, rgba(0,150,170,0.18), transparent 70%);
 }
 body.light-mode #bg-blob-2 {
-  background: radial-gradient(circle, rgba(99,32,192,0.05), transparent 70%);
+  background: radial-gradient(circle, rgba(99,32,192,0.15), transparent 70%);
 }
 body.light-mode #bg-blob-3 {
-  background: radial-gradient(circle, rgba(196,32,138,0.04), transparent 70%);
+  background: radial-gradient(circle, rgba(196,32,138,0.12), transparent 70%);
 }
 
 /* Light mode: Scroll progress */
@@ -1416,6 +1504,9 @@ body.light-mode .social-btn {
   border-color: rgba(0,0,0,0.1);
   color: #4a4a6a;
 }
+body.light-mode .social-btn:hover {
+  color: #ffffff !important;
+}
 
 /* Light mode: Profile image */
 body.light-mode section.min-h-screen img[alt="Manav"] {
@@ -1456,15 +1547,15 @@ body.light-mode #achievements .bg-white:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.1), 0 0 1px rgba(0,150,170,0.3) !important;
 }
 
-/* Light mode: Sections backgrounds */
-body.light-mode #about { background: #f0f2f8 !important; }
-body.light-mode #projects { background: #e6e9f2 !important; }
-body.light-mode #skills { background: #f0f2f8 !important; }
-body.light-mode #eduhunt { background: linear-gradient(180deg, #f0f2f8, #e6e9f2, #f0f2f8) !important; }
-body.light-mode #experience { background: linear-gradient(180deg, #e6e9f2, #f0f2f8, #e6e9f2) !important; }
-body.light-mode #testimonials { background: #e6e9f2 !important; }
-body.light-mode #achievements { background: linear-gradient(180deg, #f0f2f8, #e6e9f2) !important; }
-body.light-mode #contact { background: linear-gradient(180deg, #e6e9f2, #f0f2f8) !important; }
+/* Light mode: Sections backgrounds stripped so transparent palettes float cleanly */
+body.light-mode #about { background: transparent !important; }
+body.light-mode #projects { background: transparent !important; }
+body.light-mode #skills { background: transparent !important; }
+body.light-mode #eduhunt { background: transparent !important; }
+body.light-mode #experience { background: transparent !important; }
+body.light-mode #testimonials { background: transparent !important; }
+body.light-mode #achievements { background: transparent !important; }
+body.light-mode #contact { background: transparent !important; }
 
 /* Light mode: Text overrides */
 body.light-mode .text-gray-800 { color: #1a1a2e !important; }
