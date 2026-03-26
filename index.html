@@ -10,135 +10,127 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/6b60d6f67d.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-    
-  <!-- Scroll Progress Bar -->
-<div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-indigo-600 z-[9999]" style="width:0%"></div>
-  
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-indigo-600 z-[9999]" style="width:0%"></div>
+
 
     <!-- Navbar -->
-<nav class="fixed top-0 w-full bg-white shadow-md z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      
-      <!-- Left: Logo/Name -->
-      <div class="flex items-center">
-        <span class="text-xl font-bold text-indigo-600">@Manav10</span>
-      </div>
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
 
-      <!-- Right: Desktop menu -->
-      <div class="hidden md:flex items-center space-x-6">
-        <a href="#about" class="hover:text-indigo-600 transition">About</a>
-        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
-        <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
-        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-        <button id="theme-toggle" onclick="toggleDarkMode()" 
-        class="ml-4 text-xl hover:scale-110 transition">
-          🌙
-        </button>
+                <!-- Left: Logo/Name -->
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">@Manav10</span>
+                </div>
 
-      </div>
+                <!-- Right: Desktop menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="hover:text-indigo-600 transition">About</a>
+                    <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+                    <a href="#skills" class="hover:text-indigo-600 transition">Skills</a>
+                    <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+                    <button id="theme-toggle" onclick="toggleDarkMode()"
+                        class="ml-4 text-xl hover:scale-110 transition">
+                        🌙
+                    </button>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-gray-500 focus:outline-none">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
+                </div>
 
-  <!-- Mobile dropdown menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-    <a href="#about" class="block px-4 py-2 hover:bg-gray-100">About</a>
-    <a href="#projects" class="block px-4 py-2 hover:bg-gray-100">Projects</a>
-    <a href="#skills" class="block px-4 py-2 hover:bg-gray-100">Skills</a>
-    <a href="#contact" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
-  </div>
-</nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-500 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-100">About</a>
+            <a href="#projects" class="block px-4 py-2 hover:bg-gray-100">Projects</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-gray-100">Skills</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+        </div>
+    </nav>
 
 
     <!-- Hero Section -->
-<section class="min-h-screen flex items-center justify-center px-6 relative z-10">
+    <section class="min-h-screen flex items-center justify-center px-6 relative z-10">
 
-    <!-- Overlay removed since now we use the particle background -->
+        <!-- Overlay removed since now we use the particle background -->
 
-    <div class="relative max-w-3xl w-full text-center text-white py-24 px-8 rounded-xl backdrop-blur-md"
-         data-aos="fade-up">
+        <div class="relative max-w-3xl w-full text-center text-white py-24 px-8 rounded-xl backdrop-blur-md"
+            data-aos="fade-up">
 
-        <!-- Profile -->
-        <img src="profile-image.JPG"
-             alt="Manav"
-             class="w-28 h-28 rounded-full mx-auto mb-6 shadow-xl border-4 border-white/20">
+            <!-- Profile -->
+            <img src="profile-image.JPG" alt="Manav"
+                class="w-28 h-28 rounded-full mx-auto mb-6 shadow-xl border-4 border-white/20">
 
-        <!-- Name -->
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
-            Hi, I'm Manav
-        </h1>
+            <!-- Name -->
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
+                Hi, I'm Manav
+            </h1>
 
-        <!-- Typing -->
-        <h2 class="text-xl md:text-2xl text-indigo-400 font-semibold mb-10">
-            <span id="typing-text"></span>
-        </h2>
+            <!-- Typing -->
+            <h2 class="text-xl md:text-2xl text-indigo-400 font-semibold mb-10">
+                <span id="typing-text"></span>
+            </h2>
 
-        <!-- Social Links -->
-        <div class="flex justify-center gap-6 mb-12">
-            <a href="https://www.linkedin.com/in/manav-luhar-814534253"
-               target="_blank"
-               class="social-btn linkedin">
-                <i class="fab fa-linkedin-in text-2xl"></i>
-            </a>
+            <!-- Social Links -->
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="https://www.linkedin.com/in/manav-luhar-814534253" target="_blank" class="social-btn linkedin">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
 
-            <a href="https://github.com/Manav1811"
-               target="_blank"
-               class="social-btn github">
-                <i class="fab fa-github text-2xl"></i>
-            </a>
+                <a href="https://github.com/Manav1811" target="_blank" class="social-btn github">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
 
-            <a href="https://www.instagram.com/manav_10_7/"
-               target="_blank"
-               class="social-btn instagram">
-                <i class="fab fa-instagram text-2xl"></i>
-            </a>
+                <a href="https://www.instagram.com/manav_10_7/" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
 
-            <a href="mailto:manavluhar18@gmail.com"
-               class="social-btn email">
-                <i class="fas fa-envelope text-2xl"></i>
-            </a>
+                <a href="mailto:manavluhar18@gmail.com" class="social-btn email">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-center gap-5 flex-wrap">
+                <a href="#contact"
+                    class="bg-indigo-600 hover:bg-indigo-700 px-7 py-3 rounded-full font-medium transition">
+                    Contact Me
+                </a>
+
+                <a href="#projects"
+                    class="bg-white/20 hover:bg-white/30 px-7 py-3 rounded-full font-medium transition backdrop-blur-sm">
+                    View Projects
+                </a>
+
+                <a href="Manav_Latest_CV.pdf" download="Manav_Luhar_Resume"
+                    class="bg-green-600 hover:bg-green-700 px-7 py-3 rounded-full font-medium transition shadow-[0_4px_15px_rgba(0,255,136,0.3)] hover:shadow-[0_4px_25px_rgba(0,255,136,0.5)] border border-green-500/30">
+                    📄 Download Resume
+                </a>
+            </div>
+
         </div>
-
-        <!-- Buttons -->
-        <div class="flex justify-center gap-5 flex-wrap">
-            <a href="#contact"
-               class="bg-indigo-600 hover:bg-indigo-700 px-7 py-3 rounded-full font-medium transition">
-               Contact Me
-            </a>
-
-            <a href="#projects"
-               class="bg-white/20 hover:bg-white/30 px-7 py-3 rounded-full font-medium transition backdrop-blur-sm">
-               View Projects
-            </a>
-
-            <a href="Manav_Luhar_Resume.pdf"
-               download
-               class="bg-green-600 hover:bg-green-700 px-7 py-3 rounded-full font-medium transition">
-               📄 Download Resume
-            </a>
-        </div>
-
-    </div>
-</section>
+    </section>
 
 
 
@@ -165,225 +157,308 @@
     </section>
 
     <!-- Projects Section -->
-<!-- Replace the existing Projects section with this -->
-<section id="projects" class="py-20 px-6 relative z-10">
-    <div class="max-w-6xl mx-auto" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            <!-- Project-1 -->
-            <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
-                <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
-                    <img src="project1.webp" 
-                         alt="Project" 
-                         class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
+    <!-- Replace the existing Projects section with this -->
+    <section id="projects" class="py-20 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                <!-- Project-1 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
+                        <img src="project1.webp" alt="Project"
+                            class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-center">Multiple Disease Prediction System</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">
+                        A machine learning web app for predicting Diabetes, Heart disease & Parkinson's using FastAPI +
+                        Python.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python" class="w-4 h-4 mr-1">
+                            Python
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow" class="w-4 h-4 mr-1">
+                            TensorFlow
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://fastapi.tiangolo.com/img/favicon.png" alt="FastAPI" class="w-4 h-4 mr-1">
+                            FastAPI
+                        </span>
+                    </div>
                 </div>
-                <h3 class="font-bold text-xl mb-3 text-center">Multiple Disease Prediction System</h3>
-                <p class="text-gray-600 text-sm mb-4 text-center">
-                    A machine learning web app for predicting Diabetes, Heart disease & Parkinson's using FastAPI + Python.
-                </p>
-                <div class="flex flex-wrap gap-2 justify-center">
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
-                            alt="Python" class="w-4 h-4 mr-1">
-                        Python
-                    </span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" 
-                            alt="TensorFlow" class="w-4 h-4 mr-1">
-                        TensorFlow
-                    </span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://fastapi.tiangolo.com/img/favicon.png" 
-                            alt="FastAPI" class="w-4 h-4 mr-1">
-                        FastAPI
-                    </span>
+
+                <!-- Project-2 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
+                        <img src="project2.jpg" alt="Diamond Recognition Project"
+                            class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-center">Diamond Recognition System</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">
+                        An AI-powered system for analyzing and classifying diamonds using computer vision and deep
+                        learning techniques.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python" class="w-4 h-4 mr-1">
+                            Python
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg"
+                                alt="OpenCV" class="w-4 h-4 mr-1">
+                            OpenCV
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow" class="w-4 h-4 mr-1">
+                            TensorFlow
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Project-3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
+                        <img src="project3.png" alt="Kids Jungle Adventure Game"
+                            class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-center">Kids Jungle Adventure Game</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">
+                        Educational 2D platformer game for children ages 7-10 using GDevelop with engaging puzzles and
+                        gameplay mechanics.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://images.seeklogo.com/logo-png/47/1/gdevelop-logo-png_seeklogo-478242.png"
+                                alt="GDevelop" class="w-4 h-4 mr-1">
+                            GDevelop
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
+                                alt="Game Design" class="w-4 h-4 mr-1">
+                            Game Design
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <i class="fas fa-graduation-cap mr-1"></i>
+                            Educational
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Project-4 (From CV) -->
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
+                        <img src="istockphoto-1475054812-612x612.jpg" alt="Skin Cancer Detection AI"
+                            class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-center">Skin Cancer Detection CNN</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">
+                        A deep-learning model using hybrid CNN + Inception architecture with Batch Size Optimization, achieving 86.9% accuracy on the ISIC dataset.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python" class="w-4 h-4 mr-1">
+                            Python
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow" class="w-4 h-4 mr-1">
+                            Deep Learning
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <i class="fas fa-microscope mr-1"></i>
+                            Medical AI
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Project-5 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center transform hover:scale-105 transition-transform duration-300 shadow-inner">
+                        <i class="fas fa-city text-6xl text-white opacity-90 drop-shadow-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-center">Dalali.com</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">
+                        A full-stack real estate platform enabling users to browse, filter, and view property listings with a modern, responsive UI.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <i class="fas fa-layer-group mr-1.5"></i> Full-Stack
+                        </span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
+                            <i class="fas fa-mobile-alt mr-1.5"></i> Responsive UI
+                        </span>
+                        <a href="https://dalali-com.vercel.app/" target="_blank" class="px-3 py-1 bg-green-100 text-green-700 hover:bg-green-200 transition-colors rounded-full text-sm font-bold flex items-center shadow-sm">
+                            <i class="fas fa-external-link-alt mr-1.5 text-xs"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project-6 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
+                    <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center transform hover:scale-105 transition-transform duration-300 shadow-inner">
+                        <i class="fas fa-users-cog text-6xl text-white opacity-90 drop-shadow-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-center">Internship Management Portal</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">
+                        A role-based web portal for managing student internships, tracking applications, and streamlining approval workflows.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm flex items-center">
+                            <i class="fas fa-sitemap mr-1.5"></i> Role-based
+                        </span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm flex items-center">
+                            <i class="fas fa-tasks mr-1.5"></i> Workflows
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EduHunt Study Overseas Section -->
+    <section id="eduhunt" class="py-20 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up">
+
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">EduHunt – Study Overseas</h2>
+                <p class="text-lg text-gray-600 mt-4 italic">"Dream Big, Study Far"</p>
+            </div>
+
+            <!-- Flex Layout -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Left: Logo & Info -->
+                <div class="text-center md:text-left">
+                    <img src="eduhunt-logo.jpg" alt="Eduhunt Logo"
+                        class="w-64 md:w-80 lg:w-96 mx-auto md:mx-0 mb-8 drop-shadow-lg rounded-xl">
+                    <p class="text-lg font-semibold">📞 +91 97235 44393</p>
+                    <p class="text-sm text-gray-600">GST.NO: 24ABMPL7430Q1Z3</p>
+                    <p class="mt-4 text-gray-700 leading-relaxed">
+                        Guiding students towards their global education journey with expert counseling and trusted
+                        partnerships.
+                    </p>
+                </div>
+
+                <!-- Right: Countries with Flags -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
+
+                    <!-- Flag Item -->
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/us.svg" alt="USA" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">USA</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/ca.svg" alt="Canada" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Canada</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/gb.svg" alt="UK" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">UK</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/au.svg" alt="Australia" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Australia</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/de.svg" alt="Germany" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Germany</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/fr.svg" alt="France" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">France</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/nz.svg" alt="New Zealand" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">New Zealand</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/it.svg" alt="Italy" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Italy</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/pl.svg" alt="Poland" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Poland</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/ie.svg" alt="Ireland" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Ireland</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/es.svg" alt="Spain" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Spain</p>
+                    </div>
+
+                    <div class="transform transition duration-500 hover:scale-110">
+                        <div
+                            class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
+                            <img src="https://flagcdn.com/nl.svg" alt="Netherlands" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-2 font-medium">Netherlands</p>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Project-2 -->
-            <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
-                <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
-                    <img src="project2.jpg" 
-                         alt="Diamond Recognition Project" 
-                         class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-center">Diamond Recognition System</h3>
-                <p class="text-gray-600 text-sm mb-4 text-center">
-                    An AI-powered system for analyzing and classifying diamonds using computer vision and deep learning techniques.
-                </p>
-                <div class="flex flex-wrap gap-2 justify-center">
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
-                            alt="Python" class="w-4 h-4 mr-1">
-                        Python
-                    </span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg" 
-                            alt="OpenCV" class="w-4 h-4 mr-1">
-                        OpenCV
-                    </span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" 
-                            alt="TensorFlow" class="w-4 h-4 mr-1">
-                        TensorFlow
-                    </span>
-                </div>
-            </div>
-
-            <!-- Project-3 -->
-            <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm hover:shadow-xl transition-all duration-300">
-                <div class="aspect-video w-full mb-6 overflow-hidden rounded-lg">
-                    <img src="project3.png" 
-                         alt="Kids Jungle Adventure Game" 
-                         class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-300">
-                </div>
-                <h3 class="font-bold text-xl mb-3 text-center">Kids Jungle Adventure Game</h3>
-                <p class="text-gray-600 text-sm mb-4 text-center">
-                    Educational 2D platformer game for children ages 7-10 using GDevelop with engaging puzzles and gameplay mechanics.
-                </p>
-                <div class="flex flex-wrap gap-2 justify-center">
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://images.seeklogo.com/logo-png/47/1/gdevelop-logo-png_seeklogo-478242.png"
-                            alt="GDevelop" 
-                        class="w-4 h-4 mr-1">
-                        GDevelop
-                    </span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" 
-                            alt="Game Design" class="w-4 h-4 mr-1">
-                        Game Design
-                    </span>
-                    <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm flex items-center">
-                        <i class="fas fa-graduation-cap mr-1"></i>
-                        Educational
-                    </span>
-                </div>
+            <!-- Certification Footer -->
+            <div class="text-right mt-10 text-sm text-gray-500 italic">
+                – Certified Career Counsellor for International Studies (Edumilestones)
             </div>
         </div>
-    </div>
-</section>
-
-<!-- EduHunt Study Overseas Section -->
-<section id="eduhunt" class="py-20 px-6 relative z-10">
-  <div class="max-w-6xl mx-auto" data-aos="fade-up">
-    
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold">EduHunt – Study Overseas</h2>
-      <p class="text-lg text-gray-600 mt-4 italic">"Dream Big, Study Far"</p>
-    </div>
-
-    <!-- Flex Layout -->
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      
-      <!-- Left: Logo & Info -->
-      <div class="text-center md:text-left">
-        <img src="eduhunt-logo.jpg" alt="Eduhunt Logo" class="w-64 md:w-80 lg:w-96 mx-auto md:mx-0 mb-8 drop-shadow-lg rounded-xl">
-        <p class="text-lg font-semibold">📞 +91 97235 44393</p>
-        <p class="text-sm text-gray-600">GST.NO: 24ABMPL7430Q1Z3</p>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          Guiding students towards their global education journey with expert counseling and trusted partnerships.
-        </p>
-      </div>
-
-      <!-- Right: Countries with Flags -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
-        
-        <!-- Flag Item -->
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/us.svg" alt="USA" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">USA</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/ca.svg" alt="Canada" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Canada</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/gb.svg" alt="UK" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">UK</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/au.svg" alt="Australia" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Australia</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/de.svg" alt="Germany" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Germany</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/fr.svg" alt="France" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">France</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/nz.svg" alt="New Zealand" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">New Zealand</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/it.svg" alt="Italy" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Italy</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/pl.svg" alt="Poland" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Poland</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/ie.svg" alt="Ireland" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Ireland</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/es.svg" alt="Spain" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Spain</p>
-        </div>
-
-        <div class="transform transition duration-500 hover:scale-110">
-          <div class="w-28 h-20 mx-auto flex items-center justify-center bg-white rounded shadow-md overflow-hidden">
-            <img src="https://flagcdn.com/nl.svg" alt="Netherlands" class="w-full h-full object-cover">
-          </div>
-          <p class="mt-2 font-medium">Netherlands</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Certification Footer -->
-    <div class="text-right mt-10 text-sm text-gray-500 italic">
-      – Certified Career Counsellor for International Studies (Edumilestones)
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -392,366 +467,426 @@
 
     <!-- Skills Section -->
     <!-- All Skills -->
-       <section id="skills" class="py-20 px-6">
-    <div class="max-w-5xl mx-auto" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-12 text-center">Skills & Expertise</h2>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Programming Languages -->
-            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 class="font-bold text-xl mb-6 text-center">Programming Languages</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex flex-col items-center p-4 hover:bg-blue-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
-                             alt="Python" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-blue-600">Python</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-yellow-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
-                             alt="JavaScript" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-yellow-600">JavaScript</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-blue-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" 
-                             alt="C++" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-blue-600">C++</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-red-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" 
-                             alt="Java" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-red-600">Java</span>
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-12 text-center">Skills & Expertise</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="font-bold text-xl mb-6 text-center">Programming Languages</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-blue-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                alt="Python" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-blue-600">Python</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-yellow-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                alt="JavaScript" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-yellow-600">JavaScript</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-blue-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                                alt="C++" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-blue-600">C++</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-red-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                alt="Java" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-red-600">Java</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Frameworks & Tools -->
-            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 class="font-bold text-xl mb-6 text-center">Frameworks & Tools</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex flex-col items-center p-4 hover:bg-orange-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" 
-                             alt="TensorFlow" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-orange-600">TensorFlow</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-green-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg" 
-                             alt="OpenCV" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-green-600">OpenCV</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" 
-                             alt="PyTorch" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-purple-600">PyTorch</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-cyan-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" 
-                             alt="Docker" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-cyan-600">Docker</span>
+                <!-- Frameworks & Tools -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="font-bold text-xl mb-6 text-center">Frameworks & Tools</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-orange-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                alt="TensorFlow" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-orange-600">TensorFlow</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-green-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_no_text-1.svg"
+                                alt="OpenCV" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-green-600">OpenCV</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                                alt="PyTorch" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-purple-600">PyTorch</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-cyan-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                alt="Docker" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-cyan-600">Docker</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Design & Other -->
-            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <h3 class="font-bold text-xl mb-6 text-center">Design & Other</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" 
-                             alt="Figma" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-purple-600">Figma</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-pink-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" 
-                             alt="Canva" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-pink-600">Canva</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-blue-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" 
-                             alt="VS Code" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-blue-600">VS Code</span>
-                    </div>
-                    <div class="flex flex-col items-center p-4 hover:bg-orange-50 rounded-lg transition-all duration-300 group">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" 
-                             alt="Git" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
-                        <span class="text-sm font-medium group-hover:text-orange-600">Git</span>
+                <!-- Design & Other -->
+                <div
+                    class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <h3 class="font-bold text-xl mb-6 text-center">Design & Other</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                alt="Figma" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-purple-600">Figma</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-pink-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                                alt="Canva" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-pink-600">Canva</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-blue-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                alt="VS Code" class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-blue-600">VS Code</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 hover:bg-orange-50 rounded-lg transition-all duration-300 group">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                                class="w-12 h-12 mb-2 group-hover:scale-110 transition-transform">
+                            <span class="text-sm font-medium group-hover:text-orange-600">Git</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Experience / Timeline Section -->
-<section id="experience" class="relative py-24 px-6 overflow-hidden z-10">  
-    <div class="max-w-5xl mx-auto" data-aos="fade-up">
+    <!-- Experience / Timeline Section -->
+    <section id="experience" class="relative py-24 px-6 overflow-hidden z-10">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up">
 
-        <!-- Heading -->
-        <h2 class="text-3xl font-bold mb-16 text-center text-white">Experience & Education</h2>
+            <!-- Heading -->
+            <h2 class="text-3xl font-bold mb-16 text-center text-white">Experience & Education</h2>
 
-        <!-- Timeline Container -->
-        <div class="relative wrap overflow-hidden p-10 h-full">
-            
-            <!-- Center Vertical Line -->
-            <div class="absolute border-opacity-20 border-white h-full border-l-2 left-1/2 transform -translate-x-1/2"></div>
-            
-            <!-- Item 1 (Left) -->
-            <div class="mb-12 flex justify-between items-center w-full group">
-                <div class="w-5/12">
-                    <div class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
-                        <h3 class="text-xl font-bold text-white mb-1">High School – Science Stream</h3>
-                        <p class="text-indigo-400 font-semibold mb-3">AB School – 2021</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Completed with distinction in Physics, Chemistry, and Mathematics.
-                        </p>
+            <!-- Timeline Container -->
+            <div class="relative wrap overflow-hidden p-10 h-full">
+
+                <!-- Center Vertical Line -->
+                <div
+                    class="absolute border-opacity-20 border-white h-full border-l-2 left-1/2 transform -translate-x-1/2">
+                </div>
+
+                <!-- Item 1 (Left) -->
+                <div class="mb-12 flex justify-between items-center w-full group">
+                    <div class="w-5/12">
+                        <div
+                            class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
+                            <h3 class="text-xl font-bold text-white mb-1">High School – Science Stream</h3>
+                            <p class="text-indigo-400 font-semibold mb-3">AB School – 2021</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Completed with distinction in Physics, Chemistry, and Mathematics.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="w-2/12 flex justify-center z-10 relative">
-                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
-                </div>
-                <div class="w-5/12"></div>
-            </div>
-
-            <!-- Item 2 (Right) -->
-            <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
-                <div class="w-5/12">
-                    <div class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
-                        <h3 class="text-xl font-bold text-white mb-1">Bachelor’s in Computer Engineering</h3>
-                        <p class="text-indigo-400 font-semibold mb-3">Charusat University – 2021–2025</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Specialized in AI, Machine Learning, and Full Stack Development.
-                        </p>
+                    <div class="w-2/12 flex justify-center z-10 relative">
+                        <div
+                            class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors">
+                        </div>
                     </div>
+                    <div class="w-5/12"></div>
                 </div>
-                <div class="w-2/12 flex justify-center z-10 relative">
-                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
-                </div>
-                <div class="w-5/12"></div>
-            </div>
 
-            <!-- Item 3 (Left) -->
-            <div class="mb-12 flex justify-between items-center w-full group">
-                <div class="w-5/12">
-                    <div class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
-                        <h3 class="text-xl font-bold text-white mb-1">Node.JS Developer – Intern</h3>
-                        <p class="text-indigo-400 font-semibold mb-3">Upstair Technologies LLP (Surat) – 05/2023 – 06/2023</p>
-                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
-                            <li>Angular/Node.js based web page</li>
-                            <li>Different types of operations on web page</li>
-                            <li>CRUD application</li>
-                        </ul>
+                <!-- Item 2 (Right) -->
+                <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
+                    <div class="w-5/12">
+                        <div
+                            class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-xl font-bold text-white mb-1">Bachelor’s in Computer Engineering</h3>
+                            <p class="text-indigo-400 font-semibold mb-3">Charusat University – 2021–2025</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                Specialized in AI, Machine Learning, and Full Stack Development.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="w-2/12 flex justify-center z-10 relative">
-                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
-                </div>
-                <div class="w-5/12"></div>
-            </div>
-
-            <!-- Item 4 (Right) -->
-            <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
-                <div class="w-5/12">
-                    <div class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
-                        <h3 class="text-xl font-bold text-white mb-1">Computer Vision Engineer – Intern</h3>
-                        <p class="text-indigo-400 font-semibold mb-3">Techno Smart Diamond Solution (Surat) – 05/2024 – 06/2024</p>
-                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
-                            <li>Diamond Part Recognition</li>
-                            <li>Dataset creation</li>
-                            <li>Model Training and validation</li>
-                        </ul>
+                    <div class="w-2/12 flex justify-center z-10 relative">
+                        <div
+                            class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors">
+                        </div>
                     </div>
+                    <div class="w-5/12"></div>
                 </div>
-                <div class="w-2/12 flex justify-center z-10 relative">
-                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
-                </div>
-                <div class="w-5/12"></div>
-            </div>
 
-            <!-- Item 5 (Left) -->
-            <div class="mb-12 flex justify-between items-center w-full group">
-                <div class="w-5/12">
-                    <div class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
-                        <h3 class="text-xl font-bold text-white mb-1">Data Analyst – Intern</h3>
-                        <p class="text-indigo-400 font-semibold mb-3">Techno Smart Diamond Solution (Surat) – 10/2024 – 07/2025</p>
-                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
-                            <li>Building multiple disease prediction system</li>
-                            <li>Heart, diabetes and Parkinson’s models creation</li>
-                            <li>Dataset Understanding & SVM usage</li>
-                        </ul>
+                <!-- Item 3 (Left) -->
+                <div class="mb-12 flex justify-between items-center w-full group">
+                    <div class="w-5/12">
+                        <div
+                            class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
+                            <h3 class="text-xl font-bold text-white mb-1">Node.JS Developer – Intern</h3>
+                            <p class="text-indigo-400 font-semibold mb-3">Upstair Technologies LLP (Surat) – 05/2023 –
+                                06/2023</p>
+                            <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Angular/Node.js based web page</li>
+                                <li>Different types of operations on web page</li>
+                                <li>CRUD application</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="w-2/12 flex justify-center z-10 relative">
-                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
-                </div>
-                <div class="w-5/12"></div>
-            </div>
-
-            <!-- Item 6 (Right) -->
-            <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
-                <div class="w-5/12">
-                    <div class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
-                        <h3 class="text-xl font-bold text-white mb-1">Master's in AI & Data Science</h3>
-                        <p class="text-indigo-400 font-semibold mb-3">Gisma University – Pursuing</p>
-                        <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
-                            <li>Currently enrolled in Master's degree program</li>
-                            <li>Specialization in Artificial Intelligence</li>
-                            <li>Advanced Data Science methodologies</li>
-                        </ul>
+                    <div class="w-2/12 flex justify-center z-10 relative">
+                        <div
+                            class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors">
+                        </div>
                     </div>
+                    <div class="w-5/12"></div>
                 </div>
-                <div class="w-2/12 flex justify-center z-10 relative">
-                    <div class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors"></div>
-                </div>
-                <div class="w-5/12"></div>
-            </div>
 
+                <!-- Item 4 (Right) -->
+                <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
+                    <div class="w-5/12">
+                        <div
+                            class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-xl font-bold text-white mb-1">Computer Vision Engineer – Intern</h3>
+                            <p class="text-indigo-400 font-semibold mb-3">Techno Smart Diamond Solution (Surat) –
+                                05/2024 – 06/2024</p>
+                            <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Diamond Part Recognition</li>
+                                <li>Dataset creation</li>
+                                <li>Model Training and validation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-2/12 flex justify-center z-10 relative">
+                        <div
+                            class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors">
+                        </div>
+                    </div>
+                    <div class="w-5/12"></div>
+                </div>
+
+                <!-- Item 5 (Left) -->
+                <div class="mb-12 flex justify-between items-center w-full group">
+                    <div class="w-5/12">
+                        <div
+                            class="glass-pallet p-6 text-left ml-auto transform group-hover:-translate-x-2 transition-transform duration-300">
+                            <h3 class="text-xl font-bold text-white mb-1">Data Analyst – Intern</h3>
+                            <p class="text-indigo-400 font-semibold mb-3">Techno Smart Diamond Solution (Surat) –
+                                10/2024 – 07/2025</p>
+                            <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Building multiple disease prediction system</li>
+                                <li>Heart, diabetes and Parkinson’s models creation</li>
+                                <li>Dataset Understanding & SVM usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-2/12 flex justify-center z-10 relative">
+                        <div
+                            class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors">
+                        </div>
+                    </div>
+                    <div class="w-5/12"></div>
+                </div>
+
+                <!-- Item 6 (Right) -->
+                <div class="mb-12 flex justify-between items-center w-full group flex-row-reverse">
+                    <div class="w-5/12">
+                        <div
+                            class="glass-pallet p-6 text-left mr-auto transform group-hover:translate-x-2 transition-transform duration-300">
+                            <h3 class="text-xl font-bold text-white mb-1">Master's in AI & Data Science</h3>
+                            <p class="text-indigo-400 font-semibold mb-3">Gisma University – Pursuing</p>
+                            <ul class="text-gray-400 text-sm space-y-1 list-disc list-inside">
+                                <li>Currently enrolled in Master's degree program</li>
+                                <li>Specialization in Artificial Intelligence</li>
+                                <li>Advanced Data Science methodologies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-2/12 flex justify-center z-10 relative">
+                        <div
+                            class="w-5 h-5 bg-indigo-500 rounded-full border-4 border-[rgba(5,10,24,1)] shadow-[0_0_15px_rgba(0,240,255,0.6)] group-hover:bg-cyan-400 transition-colors">
+                        </div>
+                    </div>
+                    <div class="w-5/12"></div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-20 px-6 relative z-10">
-  <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
 
-    <!-- Heading -->
-    <h2 class="text-3xl font-bold mb-12">Testimonials</h2>
+            <!-- Heading -->
+            <h2 class="text-3xl font-bold mb-12">Testimonials</h2>
 
-    <!-- Testimonial Card -->
-    <div class="relative flex items-center justify-center">
-      <button onclick="prevTestimonial()" class="absolute left-0 bg-indigo-600 text-white px-3 py-2 rounded-full">‹</button>
-      
-      <div id="testimonial-box" 
-           class="w-full max-w-2xl bg-gray-100 p-8 rounded-2xl shadow-md transition-all duration-700 opacity-100 transform">
-        <p class="text-lg italic text-gray-700 mb-6">
-          "Manav shows great potential in Skin Cancer Based Detection Research."
-        </p>
-        <h4 class="font-semibold">Ronak N Patel</h4>
-        <p class="text-sm text-gray-500">Professor, Charusat University</p>
-      </div>
+            <!-- Testimonial Card -->
+            <div class="relative flex items-center justify-center">
+                <button onclick="prevTestimonial()"
+                    class="absolute left-0 bg-indigo-600 text-white px-3 py-2 rounded-full">‹</button>
 
-      <button onclick="nextTestimonial()" class="absolute right-0 bg-indigo-600 text-white px-3 py-2 rounded-full">›</button>
-    </div>
-  </div>
-</section>
-
-<!-- Achievements Section -->
-
-<section id="achievements" class="py-20 px-6 relative z-10">
-    <div class="max-w-6xl mx-auto" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-12 text-center">Achievements & Certifications</h2>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Research Paper Certificate -->
-            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center justify-center w-28 h-28 bg-white rounded-full shadow-[0_4px_20px_rgba(0,240,255,0.15)] mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <img src="research-logo.jpg" alt="Research Logo" class="w-20 h-20 object-contain drop-shadow-md">
+                <div id="testimonial-box"
+                    class="w-full max-w-2xl bg-gray-100 p-8 rounded-2xl shadow-md transition-all duration-700 opacity-100 transform">
+                    <p class="text-lg italic text-gray-700 mb-6">
+                        "Manav shows great potential in Skin Cancer Based Detection Research."
+                    </p>
+                    <h4 class="font-semibold">Ronak N Patel</h4>
+                    <p class="text-sm text-gray-500">Professor, Charusat University</p>
                 </div>
 
-                <h3 class="text-xl font-bold text-center mb-4">Research Publication</h3>
-                <!-- Certificate Image Container -->
-                <div class="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow">
-                    <img src="research-certificate.jpg" 
-                         alt="Research Paper Certificate" 
-                         class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
-                    <!-- Overlay on hover -->
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to view</span>
-                    </div>
-                </div>
-                <div class="space-y-2 text-gray-600">
-                    <p class="text-center">Published Research paper on Batch Size Optimization in CNN+Inceptoin-Based Skin Cancer Detection</p>
-                    <div class="flex items-center justify-center space-x-2 text-sm mt-2">
-                        <i class="fas fa-calendar-alt text-indigo-600"></i>
-                        <span>July 2025</span>
-                    </div>
-                    <!-- Lightbox trigger -->
-                    <button onclick="openLightbox('research-certificate.jpg')" 
-                            class="w-full mt-4 py-2 px-4 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-300">
-                        View Full Certificate
-                    </button>
-                </div>
+                <button onclick="nextTestimonial()"
+                    class="absolute right-0 bg-indigo-600 text-white px-3 py-2 rounded-full">›</button>
             </div>
+        </div>
+    </section>
 
-            <!-- Study Abroad Consultant Certificate -->
-            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div class="flex items-center justify-center w-28 h-28 bg-white rounded-full shadow-[0_4px_20px_rgba(0,240,255,0.15)] mb-6 mx-auto group-hover:scale-110 transition-transform">
-                    <img src="certificate-logo.jpg" alt="Certificate Logo" class="w-20 h-20 object-contain drop-shadow-md">
-                </div>
+    <!-- Achievements Section -->
 
-                <h3 class="text-xl font-bold text-center mb-4">Study Abroad Consultant Certification</h3>
-                <!-- Certificate Image Container -->
-                <div class="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow">
-                    <img src="consultant-certificate.jpg" 
-                         alt="Study Abroad Consultant Certificate" 
-                         class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
-                    <!-- Overlay on hover -->
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click to view</span>
+    <section id="achievements" class="py-20 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-12 text-center">Achievements & Certifications</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Research Paper Certificate -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div
+                        class="flex items-center justify-center w-28 h-28 bg-white rounded-full shadow-[0_4px_20px_rgba(0,240,255,0.15)] mb-6 mx-auto group-hover:scale-110 transition-transform">
+                        <img src="research-logo.jpg" alt="Research Logo"
+                            class="w-20 h-20 object-contain drop-shadow-md">
+                    </div>
+
+                    <h3 class="text-xl font-bold text-center mb-4">Research Publication</h3>
+                    <!-- Certificate Image Container -->
+                    <div
+                        class="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow">
+                        <img src="research-certificate.jpg" alt="Research Paper Certificate"
+                            class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <!-- Overlay on hover -->
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                            <span
+                                class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click
+                                to view</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="text-center">Published Research paper on Batch Size Optimization in
+                            CNN+Inceptoin-Based Skin Cancer Detection</p>
+                        <div class="flex items-center justify-center space-x-2 text-sm mt-2">
+                            <i class="fas fa-calendar-alt text-indigo-600"></i>
+                            <span>July 2025</span>
+                        </div>
+                        <!-- Links -->
+                        <div class="flex flex-col sm:flex-row gap-3 mt-4">
+                            <button onclick="openLightbox('research-certificate.jpg')"
+                                class="w-full sm:w-1/2 py-2 px-4 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-300">
+                                View Certificate
+                            </button>
+                            <a href="https://doi.org/10.1007/978-3-032-10940-8_23" target="_blank"
+                                class="w-full sm:w-1/2 flex items-center justify-center gap-2 py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none transition-colors duration-300 shadow-md">
+                                <i class="fas fa-external-link-alt text-sm"></i> Springer Link
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="space-y-2 text-gray-600">
-                    <p class="text-center">Certified Educational Consultant for International Studies from Certified Career Counsellor for International Studies</p>
-                    <div class="flex items-center justify-center space-x-2 text-sm mt-2">
-                        <i class="fas fa-calendar-alt text-purple-600"></i>
-                        <span>May 2025</span>
+
+                <!-- Study Abroad Consultant Certificate -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div
+                        class="flex items-center justify-center w-28 h-28 bg-white rounded-full shadow-[0_4px_20px_rgba(0,240,255,0.15)] mb-6 mx-auto group-hover:scale-110 transition-transform">
+                        <img src="certificate-logo.jpg" alt="Certificate Logo"
+                            class="w-20 h-20 object-contain drop-shadow-md">
                     </div>
-                    <!-- Lightbox trigger -->
-                    <button onclick="openLightbox('consultant-certificate.jpg')" 
+
+                    <h3 class="text-xl font-bold text-center mb-4">Study Abroad Consultant Certification</h3>
+                    <!-- Certificate Image Container -->
+                    <div
+                        class="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg group-hover:shadow-lg transition-shadow">
+                        <img src="consultant-certificate.jpg" alt="Study Abroad Consultant Certificate"
+                            class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <!-- Overlay on hover -->
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                            <span
+                                class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Click
+                                to view</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p class="text-center">Certified Educational Consultant for International Studies from Certified
+                            Career Counsellor for International Studies</p>
+                        <div class="flex items-center justify-center space-x-2 text-sm mt-2">
+                            <i class="fas fa-calendar-alt text-purple-600"></i>
+                            <span>May 2025</span>
+                        </div>
+                        <!-- Lightbox trigger -->
+                        <button onclick="openLightbox('consultant-certificate.jpg')"
                             class="w-full mt-4 py-2 px-4 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition-colors duration-300">
-                        View Full Certificate
-                    </button>
+                            View Full Certificate
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Lightbox Modal -->
-    <div id="certificateLightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center">
-        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl">&times;</button>
-        <img id="lightboxImage" src="" alt="Certificate" class="max-w-[90%] max-h-[90vh] object-contain">
-    </div>
-</section>
+        <!-- Lightbox Modal -->
+        <div id="certificateLightbox"
+            class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl">&times;</button>
+            <img id="lightboxImage" src="" alt="Certificate" class="max-w-[90%] max-h-[90vh] object-contain">
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <!-- Contact Section -->
-<section id="contact" class="py-20 px-6 relative z-10">
-  <div class="max-w-4xl mx-auto" data-aos="fade-up">
-    <!-- Heading -->
-    <h2 class="text-3xl font-bold mb-12 text-center">Contact Me</h2>
+    <section id="contact" class="py-20 px-6 relative z-10">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <!-- Heading -->
+            <h2 class="text-3xl font-bold mb-12 text-center">Contact Me</h2>
 
-    <!-- Contact Card -->
-    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 max-w-2xl mx-auto">
-      <form action="https://formspree.io/f/mrbaggan" method="POST" class="space-y-6">
-        
-        <!-- Name -->
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-          <input type="text" id="name" name="name" required
-            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <!-- Contact Card -->
+            <div
+                class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 max-w-2xl mx-auto">
+                <form action="https://formspree.io/f/mrbaggan" method="POST" class="space-y-6">
+
+                    <!-- Name -->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+
+                    <!-- Button -->
+                    <button type="submit"
+                        class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-indigo-700 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
         </div>
-
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
-          <input type="email" id="email" name="email" required
-            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-        </div>
-
-        <!-- Message -->
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-          <textarea id="message" name="message" rows="5" required
-            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-        </div>
-
-        <!-- Button -->
-        <button type="submit"
-          class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-indigo-700 transition-colors">
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -760,18 +895,15 @@
         © 2025 Manav Jitubhai Luhar. All rights reserved.
     </footer>
 
-    
+
     <!-- WhatsApp Floating Widget (Failsafe) -->
-    <a href="https://wa.me/919723544393"
-       target="_blank"
-       style="position: fixed; bottom: 40px; right: 40px; width: 64px; height: 64px; background-color: #25D366; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 10px 25px rgba(37,211,102,0.6); z-index: 9999; text-decoration: none; transition: transform 0.3s ease;"
-       class="hover:scale-110">
-       <i class="fab fa-whatsapp" style="font-size: 36px; "></i>
+    <a href="https://wa.me/919723544393" target="_blank"
+        style="position: fixed; bottom: 40px; right: 40px; width: 64px; height: 64px; background-color: #25D366; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 10px 25px rgba(37,211,102,0.6); z-index: 9999; text-decoration: none; transition: transform 0.3s ease;"
+        class="hover:scale-110">
+        <i class="fab fa-whatsapp" style="font-size: 36px; "></i>
     </a>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-
- 

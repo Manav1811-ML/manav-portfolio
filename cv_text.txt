@@ -1,0 +1,53 @@
+Manav Jitubhai Luhar Passport: Z7385369  Date of birth: 18/11/2003  Place of birth: Navsari, India  Nationality: Indian  
+Phone number: (+49) 15565704543 (Mobile)  Email address: manavluhar10@gmail.com   
+Address: Angerburger Allee 59, WNr. 25 Etage 2 Re Mi, Berlin Charlottenburg-Wilmersdorf, 14055, Berlin, Germany
+(Home)   
+I have a passion for technology and I'm driven to help others with my knowledge and skills. I'm seeking an opportunity
+to learn and grow in the tech industry. I'm a quick learner and eager to take on new challenges. Additionally, I have
+strong communication skills which makes me an eﬀective team member
+DATA ANALYST – TECHNO SMART DIAMOND SOLUTION – 10/01/2025 – 10/07/2025 – SURAT, INDIA 
+Building multiple disease prediction system
+Heart,diabetes and parkinsons disease models creation
+Dataset Understanding
+SVM use
+COMPUTER VISION ENGINEER – TECHNO SMART DIAMOND SOLUTION – 05/2024 – 06/2024 – SURAT, INDIA 
+Diamond Part Recognization
+Dataset creation
+Model Training and validation
+NODE.JS DEVELPOER – UPSTAIR TECHNOLOGIES LLP – 05/2023 – 06/2023 – SURAT, INDIA 
+Angular/Node.js based web page
+DIﬀerent type of operations on web page
+CRUD application
+15/09/2025 – CURRENT Postdam, Germany 
+MSC DATA SCIENCE,AI AND DIGITAL BUSINESS Gisma University Of Applied Sciences 
+Website https://www.gisma.com/  Field of studyEngineering, manufacturing and construction 
+06/2021 – 06/2025 Nadiad, India 
+COMPUTER ENGINEERING Charusat University 
+Website https://www.charusat.ac.in/  Final grade7.59 
+06/2020 – 06/2021 Navsari, India 
+12TH A B School 
+Website https://partapore.abschool.in/Site/Default.aspx  Final gradeA2 
+06/2018 – 06/2019 Navsari, India 
+10TH A B School 
+Website https://partapore.abschool.in/Site/Default.aspx  Final gradeA1 
+ABOUT ME WORK EXPERIENCE
+EDUCATION AND TRAINING
+Mother tongue(s):  GUJARATI 
+Other language(s):  HINDI | GERMAN 
+UNDERSTANDING SPEAKING WRITING
+Listening Reading Spoken production Spoken interaction
+ENGLISH B2 B2 B2 B2 B2
+Levels: A1 and A2: Basic user; B1 and B2: Independent user; C1 and C2: Proﬁcient user 
+Data Science | Data Collection, Data Processing, Data Analysis, Data Visualisation Machine Learning computer
+vision Python JavaScript Node JS Angular Model training data mining Microsoft Word solve
+problems HTML CSS C C++ Database : MySQL(basic) Microsoft Oﬃce Microsoft Excel Video editing
+and video making Git 
+2026 
+Batch Size Optimization in CNN + Inception–Based Skin Cancer Detection 
+Developed a deep‑learning–based skin cancer detection model using a hybrid CNN + Inception architecture.
+Conducted batch‑size optimization and hyperparameter tuning on the ISIC 2024 dermoscopic image dataset, achieving
+a maximum accuracy of 86.93%. The research demonstrates the potential of AI‑driven diagnostic tools for early
+melanoma detection.
+Authors: Manav J. Luhar, Parmanand Patel, Ronak Patel, Deep Kothadiya | Journal Name: Data Science and Applications (ICDSA
+2025) | Volume, Issue and Pages: Volume 1725, Pages 255–268 | Publisher: Springer Nature LANGUAGE SKILLS 
+SKILLS PUBLICATIONS 
