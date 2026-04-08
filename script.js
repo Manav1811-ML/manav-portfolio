@@ -5,6 +5,13 @@
 // ─── Wait for DOM ───
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Lazy-load non-critical images for faster initial page render.
+  document.querySelectorAll("img").forEach((img) => {
+    if (!img.hasAttribute("loading") && !img.hasAttribute("data-eager")) {
+      img.setAttribute("loading", "lazy");
+    }
+  });
+
   // =====================================================
   // 1. PARTICLE / NEURAL NETWORK CANVAS
   // =====================================================
